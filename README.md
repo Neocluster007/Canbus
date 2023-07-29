@@ -42,3 +42,10 @@ AAAA 0001
 > Node-Red
 
 - https://nodered.org/docs/getting-started/raspberrypi
+
+
+> Git Command
+
+- git add .
+- git git commit -m “change function b”
+- git push
