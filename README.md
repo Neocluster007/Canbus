@@ -7,7 +7,7 @@ sudo apt-get install gpsd gpsd-clients
 man gpsd
 cat /dev/serial0
 
-AAAA
+AAAA 0001
 
 
 # Reference
