@@ -1,0 +1,200 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU
+
+
+BO_ 2365063601 Tip_Start_LowSpeed: 8 Vector__XXX
+ SG_ Tip_LifeValue : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Tip_BeepSize : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Tip_ToneOff : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Tip_Working_Status : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566324725 BatteryFireExtinguisher: 8 Vector__XXX
+ SG_ Extinguisher_Life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Extinguisher_Start_Status : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Extinguisher_CabinetTemp : 32|8@1+ (1,-40) [-40|215] "  C" Vector__XXX
+ SG_ Extinguisher_FaultLevel : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Extinguisher_WorkState_Sensor : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Extinguisher_BattPackNumber : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ FireExtinguisher_Status : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566128407 Vehicle_Information2: 2 Vector__XXX
+ SG_ MotorCoolant_Temp : 8|8@1+ (1,-40) [-40|215] " C" Vector__XXX
+ SG_ EngineCompartment_Temp : 0|8@1+ (1,-40) [-40|215] " C" Vector__XXX
+
+BO_ 2566128151 Vehicle_Mileage: 6 Vector__XXX
+ SG_ Instrument_ProgramVersion : 40|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
+ SG_ Communication_ProtocolVersion : 32|8@1+ (0.01,2) [0|255] "" Vector__XXX
+ SG_ Mileage : 0|32@1+ (0.125,0) [0|536870911.875] "  km" Vector__XXX
+
+BO_ 2566127895 Vehicle_Information: 8 Vector__XXX
+ SG_ Vehicle_Status3 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Vehicle_InstrumentAlarm2 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Vehicle_Status2 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RearBrake_AirPressure : 32|8@1+ (5,0) [0|1275] "  kPa" Vector__XXX
+ SG_ FrontBrake_AirPressure : 24|8@1+ (5,0) [0|1275] "  kPa" Vector__XXX
+ SG_ Vehicle_InstrumentAlarm1 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Vehicle_Status1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LowVolatgeBattery : 0|8@1+ (0.2,0) [0|51] "  V" Vector__XXX
+
+BO_ 2364934569 TMU_Status: 8 Vector__XXX
+ SG_ TMU_Compressor_Ratio : 24|8@1+ (1,0) [0|255] "  %" Vector__XXX
+ SG_ TMU_OutletWaterTemp : 16|8@1+ (1,-40) [-40|215] "  C" Vector__XXX
+ SG_ TMU_Life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TMU_FaultCode : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TMU_InletWaterTemp : 8|8@1+ (1,-40) [-40|215] "  C" Vector__XXX
+ SG_ TMU_ContactorCommand : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2364933063 AirCond_Status2: 8 Vector__XXX
+ SG_ AC_FaultCode : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AC_Voltage : 32|16@1+ (1,0) [0|65535] "  V" Vector__XXX
+ SG_ AC_CompressorLine_Frequency : 24|8@1+ (1,0) [0|255] "  Hz" Vector__XXX
+ SG_ AC_Compressor_Frequency : 16|8@1+ (1,0) [0|255] "  Hz" Vector__XXX
+ SG_ AC_System_Status : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AC_Component_Status : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2364932551 AirCond_Status1: 8 Vector__XXX
+ SG_ AC_Life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AC_Contactor : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AmbientTemp_Outside : 40|8@1+ (0.5,-40) [-40|87.5] "  C" Vector__XXX
+ SG_ AC_OperationMode : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AmbientTemp_Inside : 24|8@1+ (0.5,-40) [-40|87.5] "  C" Vector__XXX
+ SG_ AC_Fan_SpeedLevel : 16|8@1+ (1,0) [0|255] "  Level" Vector__XXX
+ SG_ AC_Set_Temp : 8|8@1+ (0.5,-40) [-40|87.5] "  C" Vector__XXX
+ SG_ AC_Command : 0|8@1+ (1,0) [0|255] "Start=01" Vector__XXX
+
+BO_ 2364933541 LowPressure_Oil_Pump_Status: 8 Vector__XXX
+ SG_ OilPump_status_FaultCode : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCAC_LifeSignal : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LowPressure_InverterFaultCode : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OilPump_MotorSpeed : 24|8@1+ (20,0) [0|5100] "  RPM" Vector__XXX
+ SG_ OilPump_CurrentOutput : 16|8@1+ (0.1,0) [0|25.5] "  A" Vector__XXX
+ SG_ OilPump_VoltageOutput : 0|16@1+ (0.1,0) [0|6553.5] "  V" Vector__XXX
+
+BO_ 2364933026 AirPump_Status: 8 Vector__XXX
+ SG_ BYTE5_FaultCode : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCAC_LifeSignal : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE7_InverterFaultCode : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AirPump_Temperature : 40|8@1+ (1,-40) [-40|215] "  C" Vector__XXX
+ SG_ AirPump_MotorSpeed : 24|8@1+ (20,0) [0|5100] "  RPM" Vector__XXX
+ SG_ AirPump_OutputCurrent : 16|8@1+ (0.1,0) [0|25.5] "  A" Vector__XXX
+ SG_ AirPump_OutputVoltage : 0|16@1+ (0.1,0) [0|6553.5] "  V" Vector__XXX
+
+BO_ 2364932769 DCDC_Status: 8 Vector__XXX
+ SG_ DCDC_LifeSignal : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_Bus_Voltage : 40|16@1+ (1,0) [0|65535] "  V" Vector__XXX
+ SG_ BYTE5_FaultCode : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_BodyTemperature : 24|8@1+ (1,-40) [-40|215] " C" Vector__XXX
+ SG_ DCDC_OutputVoltage : 16|8@1+ (0.5,0) [0|127.5] "  V" Vector__XXX
+ SG_ DCDC_OutputCurrent : 8|8@1+ (0.5,0) [0|127.5] "  A" Vector__XXX
+ SG_ BYTE1_working_Status : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2364932512 HighPressure_Oil_Pump_Status: 8 Vector__XXX
+ SG_ DCAC_LifeSignal : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OilPump_InverterFaultCode : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OilPump_MotorSpeed : 40|8@1+ (20,0) [0|5100] "  RPM" Vector__XXX
+ SG_ OilPump_FaultCode : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OilPump_MotorTemp : 32|8@1+ (1,-40) [-40|215] "  C" Vector__XXX
+ SG_ OilPump_CurrentOutput : 16|8@1+ (0.1,0) [0|25.5] "  A" Vector__XXX
+ SG_ OilPump_VoltageOutput : 0|16@1+ (0.1,0) [0|6553.5] "  V" Vector__XXX
+
+BO_ 2364933798 Four_in_One_Status: 8 Vector__XXX
+ SG_ BYTE4_GasContactorFeedback : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE3_VCUContactorFeedback : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE8_4in1_TroubleCode : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE7_BMSContactorFault : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE6_BMSContactorFault : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE2_BMSContactorFeedback : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE1_Four_in_One_Status : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566194416 MCU_Status4: 3 Vector__XXX
+ SG_ RemainPower_DriveSystem : 8|16@1+ (0.5,-500) [-500|32267.5] " kW" Vector__XXX
+ SG_ Peak_Power_Motor : 0|8@1+ (1,-125) [-125|130] "%" Vector__XXX
+
+BO_ 2566193904 MCU_Status2: 8 Vector__XXX
+ SG_ InverterBusCurrent : 48|16@1+ (0.1,-3200) [-3200|3353.5] "A" Vector__XXX
+ SG_ Peak_Power_DriveSystem : 32|16@1+ (0.5,-500) [-500|32267.5] " kW" Vector__XXX
+ SG_ DriveMotor_Torque_Ouput : 16|16@1+ (1,-2000) [-2000|63535] "Nm" Vector__XXX
+ SG_ DriveMotorSpeed : 0|16@1+ (1,0) [0|65535] " RPM" Vector__XXX
+
+BO_ 2566193648 MCU_Status1: 8 Vector__XXX
+ SG_ BYTE8_MCU_FaultCode : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE7_DriveSystem_Malfunction : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE6_MCU_Status : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DriveInverterBus_Voltage : 16|16@1+ (1,0) [0|65535] " V" Vector__XXX
+ SG_ Motor_Controller_Temperature : 8|8@1+ (1,-40) [-40|215] " C" Vector__XXX
+ SG_ Motor_Temperature : 0|8@1+ (1,-40) [-40|215] " C" Vector__XXX
+
+BO_ 2565932752 HighVoltageCabinetStatus: 3 Vector__XXX
+ SG_ BYTE2_BMS_Contactor_Closed : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE2_VCU_Contactor_Closed : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE1_VCU_Contactor_Command : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565932496 VCU_Enable_Control: 7 Vector__XXX
+ SG_ OilPump_Frequency : 40|16@1+ (0.1,0) [0|6553.5] "Hz" Vector__XXX
+ SG_ BYTE5_TMU_Enable : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE4_AC_Enable : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE3_DCDC_Enable : 16|8@1+ (1,0) [0|255] "TurnOn=1" Vector__XXX
+ SG_ BYTE2_AirPump_Enable : 8|8@1+ (1,0) [0|255] "TurnOn=1" Vector__XXX
+ SG_ BYTE1_OilPump_Enable : 0|8@1+ (1,0) [0|255] "TurnOn=1" Vector__XXX
+
+BO_ 2565932240 VCU_info3: 8 Vector__XXX
+ SG_ Acceleration_of_Vehicle : 48|16@1+ (0.1,0) [0|25.5] "g" Vector__XXX
+ SG_ Commu_Protocol_Version : 8|8@1+ (0.01,2) [2|4.55] "" Vector__XXX
+ SG_ BYTE1_AUTOHOLD_andLIMITMODE : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565931984 VCU_info2: 8 Vector__XXX
+ SG_ VCU_Torque_Request : 48|16@1+ (1,-2000) [-2000|63535] "Nm" Vector__XXX
+ SG_ AveragePowerConsumption_100km : 40|8@1+ (1,0) [0|255] "kWh per km" Vector__XXX
+ SG_ Brake_Pedal_Status : 32|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ Accelerator_Pedal_Status : 24|8@1+ (0.4,0) [0|102] "%" Vector__XXX
+ SG_ ApproximateRange : 8|16@1+ (0.125,0) [0|8191.875] "km" Vector__XXX
+ SG_ VCU_version : 0|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
+
+BO_ 2565931472 VCU_info1: 8 Vector__XXX
+ SG_ LifeSignal : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE7_VehicleMode : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE6_VehicleFaultCode : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE5_FaultStatus_DriveSystem : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE4_Gear_Clutch_status : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VehicleSpeed : 8|16@1+ (0.00390625,0) [0|255.99609375] "km per hour" Vector__XXX
+ SG_ BYTE1_VehicleStatus : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+

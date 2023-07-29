@@ -1,0 +1,295 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: INS VCU BMS
+VAL_TABLE_ BATT_System_Type 6 "Lithium titanate battery;" 5 "Super capacitor;" 4 "Rd;" 3 "Ternary lithium battery;" 2 "Lithium cobalt oxide battery;" 1 "Lithium manganate battery;" 0 "Lithium iron phosphate;" ;
+VAL_TABLE_ BATT_system_cooling_method 3 "other methods" 2 "Liquid cooling;" 1 "Air-cooled;" 0 " Natural cooling;" ;
+VAL_TABLE_ BATT_Power_battery_manufacturer 30 "Huizhou Yipeng
+" 29 "Henan Plain Media Li-ionBattery" 28 "Aerospace Power" 27 " Fujian fierce lion" 26 "Zhejiang Aoyou" 25 " Beijing Guoneng" 24 " Suzhou Yuliang" 23 "Zhenjiang Force
+letter" 22 " Wuhan Liwei" 21 " Tianjin Lishen" 20 "Waterma;twenty one: Suzhou Amkor" 19 "Soda" 18 "camel" 17 ":Hunan Miaosheng" 16 ".Hunan mulberry
+pause" 15 " Chuhan New Energy" 14 "Jiangsu Haistar" 13 " Shandong Weineng" 12 " ZTE Painer:" 11 " Hefei Guoxuan" 10 "More fluoride" 9 "Chuangyuan Tiandi" 8 "Guangzhou Libai" 7 "AVIC lithium battery" 6 "Boston" 5 "Hyperstron" 4 "CEIBS Weineng" 3 "Beijing Keyi" 2 "Chaowei Chuangyuan" 1 "Zheng Yun" 0 "CATL" ;
+VAL_TABLE_ BATT_subsystem_number 2 "Subsystem N" 1 "Subsystem 2" 0 "Subsystem 1" ;
+VAL_TABLE_ BATT_Battery_charging_status 3 "finished charging;" 2 "Uncharged state;" 1 "Charging while driving;" 0 "Parking and charging;" ;
+VAL_TABLE_ BATT_number_battery_failures 3 "finished charging;" 2 "Uncharged state;
+" 1 "Charging while driving;" 0 "Parking and charging;" ;
+VAL_TABLE_ BATT_Failure_level 2 "Level 3" 1 "Level 2" 0 "No fault" ;
+VAL_TABLE_ BATT_Insulation_monitor_status 1 "Not working properly" 0 "Works fine" ;
+VAL_TABLE_ BCU_Software_status 1 "Represents batch status" 0 "Represents the status of sample" ;
+VAL_TABLE_ BMUSalve_Online 1 "Online" 0 "Offline" ;
+VAL_TABLE_ BCU_Balanced_off_state 1 "Turn on equalization" 0 "Ban equalization" ;
+VAL_TABLE_ BCU_fault_status 4 "Reserve" 3 "Hardware shutdown" 2 "2 Level alarm" 1 "1 Level alarm" 0 "No trouble" ;
+VAL_TABLE_ BCU_Battery_mode 9 "AC The plug is not charged" 8 "DC The plug is not charged" 7 "AC Charging mode" 6 "DC Charging mode" 5 "Maintenance mode" 4 "Reserved" 3 "Discharge" 2 "Waiting for high pressure" 1 "Self-diagnosis" 0 "Boot Up" ;
+VAL_TABLE_ BCU_Battery_status 4 "MainContactorDiscon due to Fault" 3 "Close the main contactor" 2 "Pre-charge process" 1 "Disconnect the main contactor" 0 "initialization" ;
+VAL_TABLE_ VCU_Power_off_request 3 "Reserve
+" 2 "Reserve
+" 1 "Power-on" 0 "Power off" ;
+VAL_TABLE_ VCU_Main_contact_request 3 "Reserve" 2 "Reserve" 1 "Close the main contactor" 0 "Disconnect the main contactor" ;
+
+
+BO_ 2566900467 BMS_DTC: 8 Vector__XXX
+
+BO_ 2566893555 Batt_Information_4: 8 Vector__XXX
+ SG_ Accumulate_Regen_energy_pack : 40|20@1+ (1,0) [0|1048575] "" Vector__XXX
+ SG_ Accumulate_charging_energy_pack : 20|20@1+ (1,0) [0|1048575] "" Vector__XXX
+ SG_ Accumulate_output_energy_pack : 0|20@1+ (1,0) [0|1048575] "" Vector__XXX
+
+BO_ 2566892787 Batt_Information_3: 8 Vector__XXX
+ SG_ BATT_Commu_protocol_version : 56|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
+ SG_ BATT_System_Type : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BATT_system_cooling_method : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BATT_Total_energy_system : 32|12@1+ (0.1,0) [0|409.5] " kWh" Vector__XXX
+ SG_ BATT_Rated_voltage_batt_system : 20|12@1+ (0.2,0) [0|819] " V" Vector__XXX
+ SG_ BATT_Rated_capacity_batt_system : 8|12@1+ (0.1,0) [0|409.5] " A" Vector__XXX
+ SG_ BATT_Power_battery_manufacturer : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566892275 Batt_Information_2: 8 Vector__XXX
+ SG_ BATT_system_code : 16|48@1+ (1,0) [0|281474976710655] "" Vector__XXX
+ SG_ BATT_code_length : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BATT_subsystem_number : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BATT_Sub_System_frame_sequence : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2566892019 Batt_Information_1: 8 Vector__XXX
+ SG_ BATT_Remaining_charging_time : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BATT_charging_status : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BATT_number_battery_failures : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BATT_number_temp_probes : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BATT_Total_monomers_number : 8|16@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BATT_Number_subsystems : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566893299 Charging_Socket_TempStatus: 8 Vector__XXX
+ SG_ CHG_Neg_temp_socket_SlowCharge : 24|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ CHG_Pos_temp_socket_SlowCharge : 16|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ CHG_Neg_temp_socket_FastCharge : 8|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ CHG_Pos_temp_socket_FastCharge : 0|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+
+BO_ 2566891763 Battery_Isolation_Resistance: 8 Vector__XXX
+ SG_ BATT_Negative_insulation_resist : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BATT_Positive_insulation_resist : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Reserve_8bit : 24|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BATT_Failure_level : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BATT_Insulation_monitor_status : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BATT_Insulation_tester_Signal : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566891507 BMS_Limits_Status2: 8 Vector__XXX
+ SG_ Min_Cell_Temp_Limit : 40|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ Max_Cell_Temp_Limit : 32|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ Max_10s_Charge_Power_Limit : 24|8@1+ (1,0) [0|255] " kW" Vector__XXX
+ SG_ Max_10s_Discharge_Power_Limit : 16|8@1+ (1,0) [0|255] " kW" Vector__XXX
+ SG_ BMS_Min_SOC_Limit : 8|8@1+ (0.5,0) [0|127.5] " %" Vector__XXX
+ SG_ BMS_Max_SOC_Limit : 0|8@1+ (0.5,0) [0|127.5] " %" Vector__XXX
+
+BO_ 2566891251 BMS_Limit_Status1: 8 Vector__XXX
+ SG_ BMS_Max_Charge_Current_Limit : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Max_Discharge_Current_Limit : 48|8@1+ (2,0) [0|510] "" Vector__XXX
+ SG_ BMS_Min_Cell_Voltage_Limit : 36|12@1+ (0.0015,0) [0|6.1425] " V" Vector__XXX
+ SG_ BMS_Max_Cell_Voltage_Limit : 24|12@1+ (0.0015,0) [0|6.1425] " V" Vector__XXX
+ SG_ BMS_Min_Pack_Voltage_Limit : 12|12@1+ (0.2,0) [0|819] "" Vector__XXX
+ SG_ BMS_Max_Pack_Voltage_Limit : 0|12@1+ (0.2,0) [0|819] "" Vector__XXX
+
+BO_ 2566890995 BMS_Cell_Temperature_Status: 8 Vector__XXX
+ SG_ BMS_Min_temp_PackNumber : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_Max_temp_PackNumber : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_Min_temp_ProbeNumber : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Max_temp_ProbeNumber : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Minimum_temperature : 28|12@1+ (0.2,-50) [-50|769] " C" Vector__XXX
+ SG_ BMS_Maximum_temperature : 16|12@1+ (0.2,-50) [-50|769] " C" Vector__XXX
+ SG_ BMS_Average_monomer_temperature : 0|16@1+ (0.2,-50) [-50|13057] " C" Vector__XXX
+
+BO_ 2566890739 BMS_Cell_Voltage_Status: 8 Vector__XXX
+ SG_ BMS_Min_batt_volt_cabinet_number : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_Max_batt_volt_cabinet_number : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_Min_Voltage_Cell_Number : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Max_Voltage_Cell_Number : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Min_Cell_Voltage : 28|12@1+ (0.0015,0) [0|6.1425] " V" Vector__XXX
+ SG_ BMS_Max_Cell_Voltage : 16|12@1+ (0.0015,0) [0|6.1425] " V" Vector__XXX
+ SG_ BMS_Cell_Voltage_Sum : 0|16@1+ (0.01,0) [0|655.35] " V" Vector__XXX
+
+BO_ 2566890483 BCU_Pack_Status_2: 8 Vector__XXX
+ SG_ BCU_Software_version : 49|15@1+ (1,0) [0|32767] "" Vector__XXX
+ SG_ BCU_Software_status : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCU_Slave : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_Number_battery_boxes : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Slave_number_32 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_31 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_30 : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_29 : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_28 : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_27 : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_26 : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_25 : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_24 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_23 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_22 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_21 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_20 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_19 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_18 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_17 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_16 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_15 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_14 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_13 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_12 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_11 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_10 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_09 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_08 : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_07 : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_06 : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_05 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_04 : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_03 : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_02 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Slave_number_01 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566890227 BCU_Pack_Status_1: 8 Vector__XXX
+ SG_ BCU_Battery_power : 40|16@1+ (0.01,-325) [-325|330.35] " kW" Vector__XXX
+ SG_ BCU_Battery_current : 24|16@1+ (0.02,-500) [-500|810.7] " A" Vector__XXX
+ SG_ BCU_Input_volt_Main_contactor : 12|12@1+ (0.2,0) [0|819] " V" Vector__XXX
+ SG_ BCU_batt_volt_Precharg_contactor : 0|12@1+ (0.2,0) [0|819] " V" Vector__XXX
+
+BO_ 2566889971 BCU_Status: 8 Vector__XXX
+ SG_ BCU_Message_Counter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BCU_pack_capcacity_remaining : 48|12@1+ (0.1,0) [0|409.5] "" Vector__XXX
+ SG_ BCU_Pack_Internal_Resistance : 32|16@1+ (0.001,0) [0|65.535] "" Vector__XXX
+ SG_ BCU_SOH : 24|8@1+ (0.5,0) [0|127.5] " %" Vector__XXX
+ SG_ BCU_SOC : 16|8@1+ (0.5,0) [0|127.5] " %" Vector__XXX
+ SG_ Reserve_2bit : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCU_Balanced_off_state : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCU_Fault_Status : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BCU_Battery_mode : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BCU_Battery_status : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2566889715 VCU_Command: 8 Vector__XXX
+ SG_ VCU_Motor_AC_Curren : 24|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
+ SG_ VCU_MCU_Input_voltage : 8|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
+ SG_ Reserve_4bit : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VCU_Power_off_request : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_Main_contact_request : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+
+
+CM_ SG_ 2566892787 BATT_Commu_protocol_version "like:0x0F,Express V1.5 Version";
+CM_ SG_ 2566892275 BATT_code_length "0 Indicates that the code is not uploaded";
+CM_ SG_ 2566892275 BATT_subsystem_number "Subsystem encoding and sending frame sequence number";
+CM_ SG_ 2566892275 BATT_Sub_System_frame_sequence "Subsystem encoding and sending frame sequence number";
+CM_ SG_ 2566892019 BATT_Remaining_charging_time "This value is issued when driving feedback, abnormal termination during charging, or no plug-in charging is performed.";
+CM_ SG_ 2566891763 BATT_Negative_insulation_resist "Negative insulation resistance, low byte in front, high byte in back";
+CM_ SG_ 2566891763 BATT_Positive_insulation_resist "Positive insulation resistance, low byte first, high byte behind";
+CM_ SG_ 2566891763 BATT_Failure_level "00: more than the 500?/V It is fault-free and normal. 01: Less than 500?/V And greater than 100?/V It is a first-level fault, check after stopping. 10: Less than 100?/V For a secondary fault";
+CM_ SG_ 2566891763 BATT_Insulation_monitor_status "Each time a frame is sent, one is automatically added.";
+CM_ SG_ 2566891763 BATT_Insulation_tester_Signal "Each time a frame is sent, one is automatically added.";
+CM_ SG_ 2566890995 BMS_Min_temp_PackNumber "Subsystem number corresponding to the lowest temperature probe";
+CM_ SG_ 2566890995 BMS_Max_temp_PackNumber "Subsystem number corresponding to the highest temperature probe";
+CM_ SG_ 2566890995 BMS_Min_temp_ProbeNumber "Unit number corresponding to the lowest temperature probe";
+CM_ SG_ 2566890995 BMS_Max_temp_ProbeNumber "Unit number corresponding to the highest temperature probe";
+CM_ SG_ 2566890739 BMS_Min_batt_volt_cabinet_number "The system number corresponding to the cell with the lowest voltage";
+CM_ SG_ 2566890739 BMS_Max_batt_volt_cabinet_number "The system number corresponding to the cell with the highest voltage";
+CM_ SG_ 2566890739 BMS_Min_Voltage_Cell_Number "The cell number corresponding to the cell with the lowest voltage";
+CM_ SG_ 2566890739 BMS_Max_Voltage_Cell_Number "The cell number corresponding to the cell with the highest voltage";
+CM_ SG_ 2566890227 BCU_Battery_power "Positive power means discharging the battery, negative power means charging the battery";
+CM_ SG_ 2566890227 BCU_Battery_current "Positive current means battery discharge, negative current means battery charging";
+CM_ SG_ 2566890227 BCU_Input_volt_Main_contactor "Battery output voltage, voltage after main contactor";
+CM_ SG_ 2566890227 BCU_batt_volt_Precharg_contactor "The total battery voltage, the voltage before the relay";
+CM_ SG_ 2566889971 BCU_Message_Counter "Every 100ms add 1";
+CM_ SG_ 2566889971 BCU_Balanced_off_state "The monomer self-balancing allows or prohibits the state.";
+CM_ SG_ 2566889971 BCU_Fault_Status "Hardware shutdown: For serious faults that need to be powered off immediately, you need to find out the cause before powering on again.";
+CM_ SG_ 2566889971 BCU_Battery_mode "Power-on BMS Sent after being awakened 0, And then perform a self-test,BMS send 1, Sent after the self-check is complete 2...";
+CM_ SG_ 2566889971 BCU_Battery_status "initialization:BMS Start working
+Disconnect the main contactor: the high-voltage contactor is disconnected
+Pre-charge process: Pre-charge is in progress.
+Close the main contactor: the high-voltage contactor is closed
+Note: Normal power-on sequence
+";
+CM_ SG_ 2566889715 VCU_Motor_AC_Curren "Motor AC bus current for BMS Overcurrent protection use";
+CM_ SG_ 2566889715 VCU_MCU_Input_voltage "Motor controller bus voltage, for BMS Control main relay reference";
+CM_ SG_ 2566889715 VCU_Power_off_request "The value will be sent after the driver turns off the key 0, There will be 1~3s Power-off delay, which is required in this phase BCU Save data as soon as possible";
+CM_ SG_ 2566889715 VCU_Main_contact_request "when VCU When this request is issued, if the battery system is not faulty, BCU Pick up the pre-charged contactor and the main contactor.";
+BA_DEF_ SG_  "S2_State" HEX 0 1;
+BA_DEF_  "BusType" HEX 0 0;
+BA_DEF_DEF_  "S2_State" 0;
+BA_DEF_DEF_  "BusType" 0;
+VAL_ 2566892787 BATT_System_Type 6 "Lithium titanate battery;" 5 "Super capacitor;" 4 "Rd;" 3 "Ternary lithium battery;" 2 "Lithium cobalt oxide battery;" 1 "Lithium manganate battery;" 0 "Lithium iron phosphate;" ;
+VAL_ 2566892787 BATT_system_cooling_method 3 "other methods" 2 "Liquid cooling;" 1 "Air-cooled;" 0 " Natural cooling;" ;
+VAL_ 2566892787 BATT_Power_battery_manufacturer 30 "Huizhou Yipeng
+" 29 "Henan Plain Media Li-ionBattery" 28 "Aerospace Power" 27 " Fujian fierce lion" 26 "Zhejiang Aoyou" 25 " Beijing Guoneng" 24 " Suzhou Yuliang" 23 "Zhenjiang Force
+letter" 22 " Wuhan Liwei" 21 " Tianjin Lishen" 20 "Waterma;twenty one: Suzhou Amkor" 19 "Soda" 18 "camel" 17 ":Hunan Miaosheng" 16 ".Hunan mulberry
+pause" 15 " Chuhan New Energy" 14 "Jiangsu Haistar" 13 " Shandong Weineng" 12 " ZTE Painer:" 11 " Hefei Guoxuan" 10 "More fluoride" 9 "Chuangyuan Tiandi" 8 "Guangzhou Libai" 7 "AVIC lithium battery" 6 "Boston" 5 "Hyperstron" 4 "CEIBS Weineng" 3 "Beijing Keyi" 2 "Chaowei Chuangyuan" 1 "Zheng Yun" 0 "CATL" ;
+VAL_ 2566892275 BATT_subsystem_number 2 "Subsystem N" 1 "Subsystem 2" 0 "Subsystem 1" ;
+VAL_ 2566892019 BATT_charging_status 3 "finished charging;" 2 "Uncharged state;" 1 "Charging while driving;" 0 "Parking and charging;" ;
+VAL_ 2566891763 BATT_Failure_level 2 "Level 3" 1 "Level 2" 0 "No fault" ;
+VAL_ 2566891763 BATT_Insulation_monitor_status 1 "Not working properly" 0 "Works fine" ;
+VAL_ 2566890483 BCU_Software_status 1 "Represents batch status" 0 "Represents the status of sample" ;
+VAL_ 2566890483 Slave_number_32 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_31 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_30 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_29 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_28 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_27 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_26 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_25 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_24 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_23 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_22 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_21 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_20 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_19 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_18 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_17 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_16 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_15 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_14 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_13 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_12 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_11 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_10 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_09 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_08 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_07 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_06 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_05 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_04 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_03 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_02 1 "Online" 0 "Offline" ;
+VAL_ 2566890483 Slave_number_01 1 "Online" 0 "Offline" ;
+VAL_ 2566889971 BCU_Balanced_off_state 1 "Turn on equalization" 0 "Ban equalization" ;
+VAL_ 2566889971 BCU_Fault_Status 4 "Reserve" 3 "Hardware shutdown" 2 "2 Level alarm" 1 "1 Level alarm" 0 "No trouble" ;
+VAL_ 2566889971 BCU_Battery_mode 9 "AC The plug is not charged" 8 "DC The plug is not charged" 7 "AC Charging mode" 6 "DC Charging mode" 5 "Maintenance mode" 4 "Reserved" 3 "Discharge" 2 "Waiting for high pressure" 1 "Self-diagnosis" 0 "Boot Up" ;
+VAL_ 2566889971 BCU_Battery_status 4 "MainContactorDiscon due to Fault" 3 "Close the main contactor" 2 "Pre-charge process" 1 "Disconnect the main contactor" 0 "initialization" ;
+VAL_ 2566889715 VCU_Power_off_request 3 "Reserve
+" 2 "Reserve
+" 1 "Power-on" 0 "Power off" ;
+VAL_ 2566889715 VCU_Main_contact_request 3 "Reserve" 2 "Reserve" 1 "Close the main contactor" 0 "Disconnect the main contactor" ;
+

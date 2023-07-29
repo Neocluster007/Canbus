@@ -1,0 +1,18 @@
+RTNETLINK answers: Device or resource busy
+[message('IC_VehicleDistance', 0x18fec1ee, True, 8, None), message('IC_VehicleSpeed', 0xcfe6cee, True, 8, None), message('DCDC', 0x18fff980, True, 8, None), message('BMS_Fault', 0x18ffe9f4, True, 8, None), message('BMS_Nominal', 0x18fff1f4, True, 8, None), message('BMS_Power', 0x18ffecf4, True, 8, None), message('BMS_Temp', 0x18ffeef4, True, 8, None), message('BMS_SOH', 0x18ffeff4, True, 8, None), message('MCU_Temp', 0x18ff02ef, True, 8, None), message('MCU_Speed', 0xcff01ef, True, 8, None), message('VCU_Information_2', 0x18ffe4a0, True, 8, None), message('VCU_Information_1', 0xcffe3a0, True, 8, None), message('BMS_SOC', 0xcffeaf4, True, 8, None)]
+Test CAN receive
+Press CTRL-C to exit
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/cantools/database/can/database.py", line 385, in decode_message
+    message = self._frame_id_to_message[frame_id_or_name]
+KeyError: 419411623
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "can_dump.py", line 24, in <module>
+    print(CANDB.decode_message(msg.arbitration_id, msg.data))
+  File "/usr/local/lib/python3.7/dist-packages/cantools/database/can/database.py", line 387, in decode_message
+    message = self._name_to_message[frame_id_or_name]
+KeyError: 419411623
+pi@raspberrypi:~/maas-iot/test $ 

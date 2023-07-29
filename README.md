@@ -7,6 +7,9 @@ sudo apt-get install gpsd gpsd-clients
 man gpsd
 cat /dev/serial0
 
+AAAA
+
+
 # Reference
 
 > Intial PI

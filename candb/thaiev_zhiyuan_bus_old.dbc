@@ -1,0 +1,224 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: MASTER SLAVE
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Max_Temp_Pack4_BoxNo_Copy_1 : 0|8@1+ (1,0) [0|255] "per box" Vector__XXX
+
+BO_ 2364934569 TMU_Status: 8 Vector__XXX
+ SG_ Water_outlet : 16|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ Water_inlet : 8|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+
+BO_ 2566859593 Insulation_Tester: 6 Vector__XXX
+ SG_ Life_Signal : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Battery_Voltage : 32|16@1+ (1,0) [0|65535] "V" Vector__XXX
+ SG_ Insulation_Resistance : 8|16@1+ (1,0) [0|65535] "KOhm" Vector__XXX
+ SG_ Insulation_Monitor : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565999859 BatteryPack_Basic_Information: 8 Vector__XXX
+ SG_ BMS_ProgramVersion : 40|8@1+ (0.1,0) [0|255] "" Vector__XXX
+ SG_ ProductionYear : 56|8@1+ (1,2000) [2000|2255] " " Vector__XXX
+ SG_ Material_and_ProductionMonth : 48|8@1+ (1,0) [0|65535] " " Vector__XXX
+ SG_ Charge_times_BattLife : 24|16@1+ (1,0) [0|65535] "time" Vector__XXX
+ SG_ RatedVoltage_BatteryPack : 16|8@1+ (5,0) [0|1275] "V" Vector__XXX
+ SG_ RatedCapacity_BatteryPack : 8|8@1+ (5,0) [0|1275] "Ah" Vector__XXX
+ SG_ PowerBatt_Manufacturer : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2558466035 BatteryPack_AllCellVoltage: 8 Vector__XXX
+ SG_ Lowest_CellVoltage : 48|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ Lowest_CellVolt_SerialNumber : 32|16@1+ (1,0) [0|600] "" Vector__XXX
+ SG_ Highest_CellVoltage : 16|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ Highest_CellVolt_SerialNumber : 0|16@1+ (1,0) [0|600] "" Vector__XXX
+
+BO_ 2556368883 Battery_All_Temperature: 6 Vector__XXX
+ SG_ MinTemp_SerialNumber : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MinTemp_of_Pack : 32|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ MaxTemp_SerialNumber : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MaxTemp_of_Pack : 16|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ TempSensor_Number_of_Box : 8|8@1+ (1,0) [0|255] "Unit" Vector__XXX
+ SG_ TempSensor_Number_of_Pack : 0|8@1+ (1,0) [0|255] "Unit" Vector__XXX
+
+BO_ 2555385843 BatteryBox_OnlineStatus: 5 Vector__XXX
+ SG_ OnlineStatus_TotalPacks : 32|8@1+ (1,0) [0|255] "Box" Vector__XXX
+ SG_ OnlineBoxes25_32 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OnlineBoxes17_24 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OnlineBoxes9_16 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OnlineBoxes1_8 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565999603 Battery_MinTemperature: 8 Vector__XXX
+ SG_ Min_Temp_Pack4_BoxNo : 56|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Min_Temp_Pack4 : 48|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ Min_Temp_Pack3_BoxNo : 40|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Min_Temp_Pack3 : 32|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ Min_Temp_Pack2_BoxNo : 24|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Min_Temp_Pack2 : 16|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ Min_Temp_Pack1_BoxNo : 8|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Min_Temp_Pack1 : 0|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+
+BO_ 2565999347 Battery_MaxTemperature: 8 Vector__XXX
+ SG_ Max_Temp_Pack4_BoxNo : 56|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Max_Temp_Pack4 : 48|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ Max_Temp_Pack3_BoxNo : 40|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Max_Temp_Pack3 : 32|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ Max_Temp_Pack2_BoxNo : 24|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Max_Temp_Pack2 : 16|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ Max_Temp_Pack1_BoxNo : 8|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Max_Temp_Pack1 : 0|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+
+BO_ 2565999091 BatteryCell_MinVoltage_2: 8 Vector__XXX
+ SG_ Min_CellVoltage_Section4 : 56|8@1+ (1,0) [0|255] "Section" Vector__XXX
+ SG_ Min_CellVolt_BoxNo4 : 48|8@1+ (1,0) [0|255] "Box" Vector__XXX
+ SG_ Min_CellVoltage_4 : 32|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ Min_CellVoltage_Section3 : 24|8@1+ (1,0) [0|255] "Section" Vector__XXX
+ SG_ Min_CellVolt_BoxNo3 : 16|8@1+ (1,0) [0|255] "Box" Vector__XXX
+ SG_ Min_CellVoltage_3 : 0|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+
+BO_ 2565998835 BatteryCell_MinVoltage_1: 8 Vector__XXX
+ SG_ Min_CellVolt_BoxNo1 : 16|8@1+ (1,0) [0|255] "Box" Vector__XXX
+ SG_ Min_CellVoltage_Section2 : 56|8@1+ (1,0) [0|255] "Section" Vector__XXX
+ SG_ Min_CellVolt_BoxNo2 : 48|8@1+ (1,0) [0|255] "Box" Vector__XXX
+ SG_ Min_CellVoltage_2 : 32|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ Min_CellVoltage_Section1 : 24|8@1+ (1,0) [0|255] "Section" Vector__XXX
+ SG_ Min_CellVoltage_1 : 0|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+
+BO_ 2565998579 BatteryCell_MaxVoltage_2: 8 Vector__XXX
+ SG_ Max_CellVolatge_Section4 : 56|8@1+ (1,0) [0|255] "per section" Vector__XXX
+ SG_ Max_CellVolt_boxNo4 : 48|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Max_CellVoltage_4 : 32|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ Max_CellVolatge_Section3 : 24|8@1+ (1,0) [0|255] "per section" Vector__XXX
+ SG_ Max_CellVolt_boxNo3 : 16|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Max_CellVoltage_3 : 0|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+
+BO_ 2565998323 BatteryCell_MaxVoltage_1: 8 Vector__XXX
+ SG_ Max_CellVoltage_2 : 32|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ Max_CellVolatge_Section2 : 56|8@1+ (1,0) [0|255] "per section" Vector__XXX
+ SG_ Max_CellVolt_boxNo2 : 48|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Max_CellVolatge_Section1 : 24|8@1+ (1,0) [0|255] "per section" Vector__XXX
+ SG_ Max_CellVolt_boxNo1 : 16|8@1+ (1,0) [0|255] "per box" Vector__XXX
+ SG_ Max_CellVoltage_1 : 0|16@1+ (0.001,0) [0|65.535] "V" Vector__XXX
+
+BO_ 2565998067 BatteryFailureAlarm: 8 Vector__XXX
+ SG_ BYTE8_BatteryFail : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE7_BatteryFail : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE6_BatteryFail : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE5_BatteryFail : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE4_BatteryFail : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE3_BatteryFail : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE2_BatteryFail : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BYTE1_BatteryFail : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565997555 BatteryInformation3: 8 SLAVE
+ SG_ CommuProtocolVersionNumber : 56|8@1+ (0.01,2) [2|4.55] "" Vector__XXX
+ SG_ ChargingTimeRemaining : 8|16@1+ (1,0) [0|255] "min" Vector__XXX
+ SG_ Battery_SOH : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2565997299 BatteryInformation2: 7 Vector__XXX
+ SG_ VCU_Contactor_Closed : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSContactorClosed : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Contactor_Control_Command : 32|8@1+ (1,0) [0|255] ""  SLAVE
+ SG_ MaxDischargeCurrent30sec : 24|8@1+ (5,0) [0|1275] "A"  MASTER,SLAVE
+ SG_ MaxDischargeCurrent5min : 16|8@1+ (5,0) [0|1275] "A" Vector__XXX
+ SG_ MaxChargingCurrent30sec : 8|8@1- (5,-1000) [-1640|-365] "A" Vector__XXX
+ SG_ MaxChargingCurrent5min : 0|8@1- (5,-1000) [-1640|-365] "A" Vector__XXX
+
+BO_ 2565997043 BatteryInformation1: 8 SLAVE
+ SG_ BatteryLife : 56|8@1- (1,0) [0|255] "" Vector__XXX
+ SG_ SOC : 0|8@1+ (0.4,0) [0|102] "%"  MASTER
+ SG_ Current : 24|16@1+ (0.1,-3200) [-3200|3353.5] ""  MASTER
+ SG_ Total_voltage : 8|16@1+ (0.02,0) [0|1310.7] ""  MASTER
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 2565999859 BMS_ProgramVersion "Bit8:Battery negative contactor 1= closed, 0= open";
+CM_ SG_ 2565997299 VCU_Contactor_Closed "Bit8:Battery negative contactor 1= closed, 0= open";
+CM_ SG_ 2565997299 BMSContactorClosed "Bit8:Battery negative contactor 1= closed, 0= open";
+CM_ SG_ 2565997299 BMS_Contactor_Control_Command "Bit8:Battery negative contactor 1= closed, 0= open";
+CM_ SG_ 2565997043 BatteryLife "BMS signal";
+BA_DEF_ SG_  "GenSigStartValue" HEX 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cycle","OnChange";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cycle","Event";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cycle";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cycle";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_ "GenMsgCycleTime" BO_ 2565997043 300;
+BA_ "GenSigStartValue" SG_ 3221225472 Max_Temp_Pack4_BoxNo_Copy_1 0;
+BA_ "GenSigStartValue" SG_ 2364934569 Water_outlet 40;
+BA_ "GenSigStartValue" SG_ 2364934569 Water_inlet 40;
+BA_ "GenSigStartValue" SG_ 2556368883 MinTemp_SerialNumber 0;
+BA_ "GenSigStartValue" SG_ 2556368883 MinTemp_of_Pack 40;
+BA_ "GenSigStartValue" SG_ 2556368883 MaxTemp_SerialNumber 0;
+BA_ "GenSigStartValue" SG_ 2556368883 MaxTemp_of_Pack 40;
+BA_ "GenSigStartValue" SG_ 2565999603 Min_Temp_Pack4_BoxNo 0;
+BA_ "GenSigStartValue" SG_ 2565999603 Min_Temp_Pack4 40;
+BA_ "GenSigStartValue" SG_ 2565999603 Min_Temp_Pack3_BoxNo 0;
+BA_ "GenSigStartValue" SG_ 2565999603 Min_Temp_Pack3 40;
+BA_ "GenSigStartValue" SG_ 2565999603 Min_Temp_Pack2_BoxNo 0;
+BA_ "GenSigStartValue" SG_ 2565999603 Min_Temp_Pack2 40;
+BA_ "GenSigStartValue" SG_ 2565999603 Min_Temp_Pack1_BoxNo 0;
+BA_ "GenSigStartValue" SG_ 2565999603 Min_Temp_Pack1 40;
+BA_ "GenSigStartValue" SG_ 2565999347 Max_Temp_Pack4_BoxNo 0;
+BA_ "GenSigStartValue" SG_ 2565999347 Max_Temp_Pack4 40;
+BA_ "GenSigStartValue" SG_ 2565999347 Max_Temp_Pack3_BoxNo 0;
+BA_ "GenSigStartValue" SG_ 2565999347 Max_Temp_Pack3 40;
+BA_ "GenSigStartValue" SG_ 2565999347 Max_Temp_Pack2_BoxNo 0;
+BA_ "GenSigStartValue" SG_ 2565999347 Max_Temp_Pack2 40;
+BA_ "GenSigStartValue" SG_ 2565999347 Max_Temp_Pack1_BoxNo 0;
+BA_ "GenSigStartValue" SG_ 2565999347 Max_Temp_Pack1 40;
+BA_ "GenSigStartValue" SG_ 2565997299 MaxDischargeCurrent30sec 0;
+BA_ "GenSigStartValue" SG_ 2565997299 MaxDischargeCurrent5min 0;
+BA_ "GenSigStartValue" SG_ 2565997299 MaxChargingCurrent30sec -128;
+BA_ "GenSigStartValue" SG_ 2565997299 MaxChargingCurrent5min -128;
+BA_ "GenSigStartValue" SG_ 2565997043 SOC 0;
+BA_ "GenSigStartValue" SG_ 2565997043 Current 32000;
+

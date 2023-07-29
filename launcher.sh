@@ -1,0 +1,1 @@
+sudo python3 /home/pi/EVO-SmartIoTVehicle-main/appgps.py & sudo python3 /home/pi/EVO-SmartIoTVehicle-main/appcan.py & sudo python3 /home/pi/EVO-SmartIoTVehicle-main/apptunnel.py

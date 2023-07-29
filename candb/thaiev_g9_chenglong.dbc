@@ -1,0 +1,172 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 2566832622 IC_VehicleDistance: 8 Vector__XXX
+ SG_ IC_TotalVehicleDistance : 0|32@1+ (5,0) [0|999999] "m" Vector__XXX
+
+BO_ 2365484270 IC_VehicleSpeed: 8 Vector__XXX
+ SG_ IC_Tachograph_VehicleSpeed : 48|16@1+ (0.00390625,0) [0|256] "km/h" Vector__XXX
+
+BO_ 2566912384 DCDC: 8 Vector__XXX
+ SG_ DCDC_WorkStatus : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DCDC_Temp : 48|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ DCDC_OutputCurr : 16|16@1+ (0.05,0) [0|500] "A" Vector__XXX
+ SG_ DCDC_OutputVolt : 0|16@1+ (0.05,0) [0|100] "V" Vector__XXX
+
+BO_ 2566908404 BMS_Fault: 8 Vector__XXX
+ SG_ BMS_TotalVoltFault : 3|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_FaultLevel : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2566910452 BMS_Nominal: 8 Vector__XXX
+ SG_ BMS_NominalVolt : 48|16@1+ (1,0) [0|6553.5] "V" Vector__XXX
+ SG_ BMS_NominalCapacity : 32|16@1+ (0.1,0) [0|6553.5] "Ah" Vector__XXX
+
+BO_ 2566909172 BMS_Power: 8 Vector__XXX
+ SG_ BMS_ConsAvailableIntputPower : 48|16@1+ (10,0) [0|655350] "W" Vector__XXX
+ SG_ BMS_AvailableOuttputPeakPower : 32|16@1+ (10,0) [0|655350] "W" Vector__XXX
+ SG_ BMS_InsAvailableIntputPower : 16|16@1+ (10,0) [0|655350] "W" Vector__XXX
+ SG_ BMS_AvailableOutputPower : 0|16@1+ (10,0) [0|655350] "W" Vector__XXX
+
+BO_ 2566909684 BMS_Temp: 8 Vector__XXX
+ SG_ BMS_MaxTemp : 40|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ BMS_MinTemp : 24|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+
+BO_ 2566909940 BMS_SOH: 8 Vector__XXX
+ SG_ BMS_SOH : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 2566849263 MCU_Temp: 8 Vector__XXX
+ SG_ MCU_ControllerTemp : 56|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ MCU_MotorTemp : 48|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+
+BO_ 2365522415 MCU_Speed: 8 Vector__XXX
+ SG_ MCU_OutputSpeed : 32|16@1+ (1,-10000) [-10000|10000] "rpm" Vector__XXX
+
+BO_ 2566907040 VCU_Information_2: 8 Vector__XXX
+ SG_ VCU_DrivingStatus : 17|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ VCU_AC_Switch : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2365580192 VCU_Information_1: 8 Vector__XXX
+ SG_ VCU_DCDCcmd : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_EACcmd : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_EPScmd : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2365582068 BMS_SOC: 8 Vector__XXX
+ SG_ BMS_SOC : 56|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+
+
+CM_ SG_ 2566832622 IC_TotalVehicleDistance "Total mileage";
+CM_ SG_ 2365484270 IC_Tachograph_VehicleSpeed "Speed";
+CM_ SG_ 2566912384 DCDC_WorkStatus "DCDC Operating status
+0x0: stop
+0x1: Ready
+0x2: Run
+0x3: failure";
+CM_ SG_ 2566912384 DCDC_Temp "DCDC Module temperature";
+CM_ SG_ 2566912384 DCDC_OutputCurr "DCDC Output current";
+CM_ SG_ 2566912384 DCDC_OutputVolt "DCDC output voltage";
+CM_ SG_ 2566908404 BMS_TotalVoltFault "Battery pack voltage is abnormal
+0x0: normal
+0x1: The total voltage of the battery pack is too high
+0x2: The total voltage of the battery pack is too low";
+CM_ SG_ 2566908404 BMS_FaultLevel "Battery failure level
+0x0: normal
+0x1: Level 1 fault (minor)
+0x2: Secondary fault (warning)
+0x3: Level 3 fault (critical)";
+CM_ SG_ 2566910452 BMS_NominalVolt "Nominal voltage of battery pack";
+CM_ SG_ 2566910452 BMS_NominalCapacity "Nominal capacity of battery pack";
+CM_ SG_ 2566909172 BMS_ConsAvailableIntputPower "Continuous available feedback power";
+CM_ SG_ 2566909172 BMS_AvailableOuttputPeakPower "Maximum available discharge peak power (30s)";
+CM_ SG_ 2566909172 BMS_InsAvailableIntputPower "Available energy feedback power (instantaneous 10s)";
+CM_ SG_ 2566909172 BMS_AvailableOutputPower "Available driving output power (continuous)";
+CM_ SG_ 2566909684 BMS_MaxTemp "The highest battery temperature point temperature";
+CM_ SG_ 2566909684 BMS_MinTemp "Battery minimum temperature point temperature";
+CM_ SG_ 2566909940 BMS_SOH "SOH - 0~100%";
+CM_ SG_ 2566849263 MCU_ControllerTemp "Motor controller temperature";
+CM_ SG_ 2566849263 MCU_MotorTemp "Motor temperature";
+CM_ SG_ 2365522415 MCU_OutputSpeed "Motor current speed";
+CM_ SG_ 2566907040 VCU_DrivingStatus "Driving status
+0x0: reserved
+0x1: Low voltage power on
+0x2: High voltage power on
+0x3: Driving state
+0x4-0x6: reserved
+0x7: fault";
+CM_ SG_ 2566907040 VCU_AC_Switch "AC Switch signal state
+0x0: disconnect
+0x1: closed";
+CM_ SG_ 2365580192 VCU_DCDCcmd "DCDC enable indication
+0x0: not enabled
+0x1: enable";
+CM_ SG_ 2365580192 VCU_EACcmd "Brake DCAC enable command
+0x0: not enabled
+0x1: enable";
+CM_ SG_ 2365580192 VCU_EPScmd "Turn to DCAC enable command
+0x0 0: Disabled
+0x1 1: Enable";
+CM_ SG_ 2365582068 BMS_SOC "Battery SOC (real) - 0~100%";
+BA_DEF_ SG_  "GenSigStartValue" HEX 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cycle","OnChange";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cycle","Event";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cycle";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cycle";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_ "GenSigStartValue" SG_ 2566912384 DCDC_Temp 40;
+BA_ "GenSigStartValue" SG_ 2566909684 BMS_MaxTemp 40;
+BA_ "GenSigStartValue" SG_ 2566909684 BMS_MinTemp 40;
+BA_ "GenSigStartValue" SG_ 2566849263 MCU_ControllerTemp 40;
+BA_ "GenSigStartValue" SG_ 2566849263 MCU_MotorTemp 40;
+BA_ "GenSigStartValue" SG_ 2365522415 MCU_OutputSpeed 10000;
+

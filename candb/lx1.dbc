@@ -1,0 +1,704 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ HV_DCDC_working_status 3 "reserved " 2 "fault" 1 "work" 0 "standby" ;
+VAL_TABLE_ HV_DTC_fault_normal 1 "Failure" 0 "Normal" ;
+VAL_TABLE_ HV_DCDCEnable 2 "DCDCEnable" 1 "undefined" 0 "DCDCDisable" ;
+VAL_TABLE_ HV_Pump_Enable 3 "Undefined" 2 "Speed control" 1 "Torque control" 0 "Disable" ;
+VAL_TABLE_ Failure_Level 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_TABLE_ BMS_Charging_gun_connect_status 3 "DC multi-tip connection" 2 "DC single tip connection" 1 "AC tip connection" 0 "not connected" ;
+VAL_TABLE_ BMS_self_check_status 2 " Self-test failed" 1 " Self-check succeeded" 0 "Self-checking" ;
+VAL_TABLE_ INS_Driving_discharge_limit 4 "limp" 3 "25% power limit" 2 "50% power limit" 1 "70% power limit" 0 "unlimited" ;
+VAL_TABLE_ INS_BMS_fault_here 3 "Start to prohibit high voltage" 2 "High voltage 35S power off" 1 "request high pressure;" 0 "No fault, no processing;" ;
+VAL_TABLE_ INS_battery_failure_level 3 "critical failure" 2 "Secondary fault" 1 "Minor failure" 0 "NO error" ;
+VAL_TABLE_ Contactor_Status 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_TABLE_ BMS_Battery_Type 8 "other on board energy storage" 7 "The fuel cell" 6 "Lithium titanate battery" 5 ",Super capacitor" 4 "Rd" 3 "ternary lithium battery" 2 ", Lithium cobalt oxide battery" 1 "lithium manganate battery" 0 "lithium iron phosphate" ;
+VAL_TABLE_ BMS_Battery_Cooling_Method 3 "other methods" 2 "liquid cooling" 1 "air cooling" 0 "natural cooling" ;
+VAL_TABLE_ BMS_battery_manufacturers 30 "Mengguli" 29 "Aerospace Power" 28 " lion" 27 "Zhejiang Aoyou" 26 "Beijing Guoneng" 25 "Suzhou Quantity" 24 "Zhenjiang Lixin" 23 "Wuhan Liwei" 22 "Tianjin Lishen" 21 "Ankor" 20 "Shenzhen Waterma" 19 "create a great" 18 "camel" 17 "Hunan Miaosheng" 16 "Thornton, Hunan" 15 "Chuhan New Energy" 14 "Jiangsu Haisida" 13 "Shandong Weineng" 12 "ZTE Paineng" 11 "Hefei Guoxuan" 10 " Polyfluoride" 9 "Chuangyuan Tiandi" 8 "Guangzhou Libai;" 7 "AVIC lithium battery" 6 "Boston" 5 "Hypovision" 4 "Central Europe Power" 3 "Beijing Keyi" 2 "Chaowei Chuangyuan" 1 "Zhengyun" 0 "CATL" ;
+VAL_TABLE_ BMS_Battery_Charge_Status 4 "Charging at the swap station" 3 " The charging is completed;" 2 "Uncharged state;" 1 "Driving and charging;" 0 " Parking and charging" ;
+VAL_TABLE_ BMS_Insulation_Failure_Class 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "No trouble" ;
+VAL_TABLE_ BMS_Insulation_monitor_Status 1 "not work properly" 0 "Works fine" ;
+VAL_TABLE_ BCU_software_status 1 "batch status" 0 "sample state" ;
+VAL_TABLE_ BCU_Request_CutOff_High 1 "request to cut off high voltage" 0 "no cutoff requested" ;
+VAL_TABLE_ BCU_Balancing_Lockout_Status 1 "Equalization on" 0 "disable equalization" ;
+VAL_TABLE_ BCU_Fault_Status 3 "3level failure" 2 "2level alarm" 1 "1level alarm" 0 "No trouble" ;
+VAL_TABLE_ BCU_Battery_Mode 9 "ACThe gun is not charged" 8 "DCThe gun is not charged" 7 "ACcharging mode" 6 "DCcharging mode" 5 "maintenance mode" 4 "reserved" 3 "discharge" 2 "wait for high pressure" 1 "self-diagnosis" 0 "Boot Up" ;
+VAL_TABLE_ BCU_Battery_Status 4 "disconnected due to the fault" 3 "Close the main contactor" 2 "Precharge process" 1 "Disconnect the main contactor" 0 "initialize" ;
+VAL_TABLE_ BMS_Battery_locked_Status 2 "All unlocked" 1 "Partially lock in place" 0 "All lock in place" ;
+VAL_TABLE_ BMS_Replacement_Battery_Status 1 "Installation not in place" 0 "Installed in place" ;
+VAL_TABLE_ BMS_Battery_Swap_Status 1 "Battery Swap" 0 "Not Replaced" ;
+VAL_TABLE_ BMS_MainNegContactor_Request 3 "Reserve" 2 "Reserve" 1 "Open MainNegativeContactor" 0 "Close MainNegativeContactor" ;
+VAL_TABLE_ BMS_MainContactor_Request 3 "Reserve" 2 "Reserve" 1 "Close MainPositiveContactor" 0 "Disconnect MainPositiveContactor" ;
+VAL_TABLE_ VCU_Brake_Pedal_Status 1 "enable(with feet brake)" 0 "disable(without feet brake)" ;
+VAL_TABLE_ VCU_Hand_Brake 1 "enable(Handbrake pull
+rise)" 0 "disable(handbrake not pulled)" ;
+VAL_TABLE_ VCU_power_take_off_Status 3 "invalid" 2 "Mistake" 1 "hung up" 0 "not hung" ;
+VAL_TABLE_ VCU_Gear 21 "Gear_P" 20 "Gear_D" 19 "Gear_R" 18 "Manual downshift -" 17 "Manual upshift+" 16 "maintain current gear" 3 "economic" 2 "climbing gear" 1 "sport gear" 0 "Gear_N" ;
+VAL_TABLE_ VCU_ABS_State 3 "invalid" 2 "Mistake" 1 "ABShas worked" 0 "ABSnot working" ;
+VAL_TABLE_ VCU_Shift_Enable 3 "invalid" 2 "Mistake" 1 "allow shifting" 0 "Shifting is not allowed" ;
+VAL_TABLE_ VCU_Self_Learning 3 "invalid" 2 "Rotational self-learning error" 1 "Allows self-learning resolvers" 0 "Resolver selflearn not allow" ;
+VAL_TABLE_ VCU_Control_Mode 3 "Resolver self-learning mode" 2 "torque control" 1 "speed control" 0 "no control(since by mode)" ;
+VAL_TABLE_ VCU_Fast_discharge_enables 1 "Enable Allow fast discharge" 0 "Disable Not allow fast discharge" ;
+VAL_TABLE_ VCU_PTO_Status 3 "Invalid" 2 "Mistake" 1 "hung up" 0 "not hung" ;
+VAL_TABLE_ VCU_Vehicle_Ready 3 "Invalid" 2 "Mistake" 1 "The vehicle has beenReady" 0 "vehicle notReady" ;
+VAL_TABLE_ VCU_MCU_Enable 1 "enable(control)" 0 "disable(out of control
+system)" ;
+VAL_TABLE_ MCU_Work_Mode 10 "other modes" 9 "free mode" 8 "Resolver self-learning mode" 7 "MCUlow pressure" 6 "Rapidly under high voltage" 5 "Motor Torque Mode Operation" 4 "Motor speed mode operation" 3 "The motor is allowed to run" 2 "High voltage power-on completed" 1 "Low-voltage power-on completed" 0 "initialization" ;
+VAL_TABLE_ MCU_Motor_discharge_feedback 2 "Drain complete" 1 "discharge" 0 "not vented" ;
+VAL_TABLE_ MCU_IGBT_Status 1 "enable state" 0 "Disabled state" ;
+VAL_TABLE_ MCU_Motor_Status 15 "Invalid" 14 "Abnormal" 4 "ready state (Ready) " 3 "Disabled" 2 "Power Generation Energy Recovery" 1 "Power consumption driving state" 0 "0" ;
+VAL_TABLE_ TCU_Allow_PreCharge 3 "Invalid" 2 "Mistake" 1 "Allow precharge" 0 "Precharging is not allowe" ;
+VAL_TABLE_ TCU_Shift_Error 3 "Invalid" 2 "Mistake" 1 "Shift mismatch" 0 "Shift matching" ;
+VAL_TABLE_ TCU_Shift_Status 3 "Invalid" 2 "Mistake" 1 "Shifting gears" 0 "Shift complete" ;
+VAL_TABLE_ TCU_Shift_Requests 3 "Invalid" 2 "Mistake" 1 "request a shift" 0 "no request
+shift" ;
+VAL_TABLE_ TCU_AMT_MODE 3 "Invalid" 2 "Mistake" 1 "Manual transmission" 0 "Automatic transmission" ;
+VAL_TABLE_ TCU_Ready_State 3 "Invalid" 2 "Mistake" 1 "TCU ready" 0 "TCU not Ready" ;
+VAL_TABLE_ TCU_Current_Gear 15 "Gear invalid" 14 "P gear" 13 "R gear" 12 "12th gear" 11 "11th gear" 10 "10th gear" 9 "9th gear" 8 "8th gear" 7 "7th gear" 6 "6th gear" 5 "5th gear" 4 "4th gear" 3 "3rd gear" 2 "2nd gear" 1 "1st gear" 0 "N gear" ;
+
+
+BO_ 2297430176 HV_4IN1_COMMAND_MESSAGE: 8 Vector__XXX
+ SG_ HV_AV_EleCconsume : 48|16@1+ (0.1,0) [0|6553.5] "kWh/100km" Vector__XXX
+ SG_ HV_Vehicle_failure_level : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ HV_LEDs2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ HV_LEDs1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ HV_Remaining_Km : 16|8@1+ (3,0) [0|765] "km" Vector__XXX
+ SG_ HV_Accessory_Contactor_Directive : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_AirConditioner_Contactor : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_PTC1_Contactor : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_PTC2_Contactor : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_MainDrive_precharge_contactor : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_Main_drive_positive_contactor : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_Bodywork_PreChargedContactor : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_Bodywork_main_pos_contactor : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365577129 HV_4IN1_RELAY_MESSAGE: 8 Vector__XXX
+ SG_ HV_Relay_AirConditioning : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_Relay_PTC2 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_Relay_PTC1 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_Relay_Accessories_Oil_Airpump : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_Relay_Bodywork : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_Relay_Bodywork_Precharge : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_Relay_Main_drive : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_Relay_Main_drive_precharge : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566824101 HV_DCDC_MESSAGE2: 8 Vector__XXX
+ SG_ HV_DCDC_version_number : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ HV_DCDC_Life_Signal : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ HV_DTC_DCDC_failure_class : 20|4@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Communication_TimedOut : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_limited_power : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_hardware_malfunction : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserve_bit1 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Over_temperature : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Output_short_circuit : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Output_overcurrent : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Output_current_limit : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_output_undervoltage : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_output_overvoltage : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Input_overvoltage : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Input_undervoltage : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DCDC_working_status : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566889637 HV_DCDC_MESSAGE1: 8 Vector__XXX
+ SG_ HV_DCDC_body_temperature : 48|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ HV_real_time_input_voltage : 32|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ HV_real_time_output_current : 16|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ HV_real_time_output_voltage : 0|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+
+BO_ 2356008868 HV_AIR_PUMP_MESSAGE2: 8 Vector__XXX
+ SG_ HV_Air_pump_signal : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ HV_Air_pump_motor_temperature : 48|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ HV_Air_pump_motor_torque : 32|16@1+ (0.2,0) [0|13107] "Nm" Vector__XXX
+ SG_ HV_Air_pump_motor_current : 24|8@1+ (0.2,0) [0|51] "A" Vector__XXX
+ SG_ HV_Air_pump_motor_voltage : 16|8@1+ (3,0) [0|765] "V" Vector__XXX
+ SG_ HV_Air_pump_motor_speed : 0|16@1+ (1,-6000) [-6000|59535] "RPM" Vector__XXX
+
+BO_ 2355943332 HV_AIR_PUMP_MESSAGE1: 8 Vector__XXX
+ SG_ HV_AirPump_Controller_Fault : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ HV_AirPump_Controller_Temp : 48|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ HV_AirPumpDCAC_Current : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ HV_AirPumpDCAC_Voltage : 16|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ HV_DTC_failure_class : 13|3@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved_2bit : 11|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Fault_temperatureSensor : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Relay_pull_in_often : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Self_check_exception : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Controller_overheat : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_output_phase_loss : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Short_circuit_protection : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_disconnection : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_undervoltage : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_overload : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_overvoltage : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_overcurrent : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2354960291 HV_OIL_PUMP_MESSAGE2: 8 Vector__XXX
+ SG_ HV_Oil_pump_signal : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ HV_Oil_pump_motor_temperature : 48|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ HV_Oil_pump_motor_torque : 32|16@1+ (0.2,0) [0|13107] "Nm" Vector__XXX
+ SG_ HV_Oil_pump_motor_current : 24|8@1+ (0.2,0) [0|51] "A" Vector__XXX
+ SG_ HV_Oil_pump_motor_voltage : 16|8@1+ (3,0) [0|765] "V" Vector__XXX
+ SG_ HV_Oil_pump_motor_speed : 0|16@1+ (1,-6000) [-6000|59535] "RPM" Vector__XXX
+
+BO_ 2354894755 HV_OIL_PUMP_MESSAGE1: 8 Vector__XXX
+ SG_ HV_OilPump_Controller_Fault : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ HV_OilPump_Controller_Temp : 48|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ HV_OilPumpDCAC_Current : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ HV_OilPumpDCAC_Voltage : 16|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ HV_DTC_failure_class : 13|3@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved_2bit : 11|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Fault_temperatureSensor : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Relay_pull_in_often : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Self_check_exception : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Controller_overheat : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_output_phase_loss : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_Short_circuit_protection : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_disconnection : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_undervoltage : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_overload : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_overvoltage : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HV_DTC_overcurrent : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2352750752 HV_VCU_COMMAND_4IN1: 8 Vector__XXX
+ SG_ HV_VCUheartbeat_signal : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ HV_ACCompressor_SpeedControl : 40|16@1+ (1,0) [0|65535] "RPM" Vector__XXX
+ SG_ HV_AirPump_SpeedControl : 24|16@1+ (1,-6000) [-6000|59535] "RPM" Vector__XXX
+ SG_ HV_OilPump_SpeedControl : 8|16@1+ (1,-6000) [-6000|59535] "RPM" Vector__XXX
+ SG_ HV_AC_compressor_enable : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_DCDC_Enable : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_AirPump_Enable : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV_OilPump_Enable : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566890995 BMS_Unit_temperature_limit_state: 8 Vector__XXX
+ SG_ BMS_Minimum_temperature_value : 28|12@1+ (0.2,-50) [-50|769] " C" Vector__XXX
+ SG_ BMS_Maximum_temperature_value : 16|12@1+ (0.2,-50) [-50|769] " C" Vector__XXX
+ SG_ BMS_Average_monomer_temperature : 0|16@1+ (0.2,-50) [-50|13057] " C" Vector__XXX
+
+BO_ 2566890739 BMS_SingleCell_voltage_limit: 8 Vector__XXX
+ SG_ BMS_Minimum_cell_voltage : 28|12@1+ (0.0015,0) [0|6.1425] " V" Vector__XXX
+ SG_ BMS_Maximum_single_pressure : 16|12@1+ (0.0015,0) [0|6.1425] " V" Vector__XXX
+ SG_ BMS_Sum_cell_voltages : 0|16@1+ (0.01,0) [0|655.35] " V" Vector__XXX
+
+BO_ 2566901747 CHARGING_INFORMATION2: 8 Vector__XXX
+ SG_ CHG_remaining_battery_power : 32|16@1+ (0.1,0) [0|6553.5] " kWh" Vector__XXX
+ SG_ CHG_Quick_change_charging_energy : 0|32@1+ (0.1,0) [0|429496729.5] " kWh" Vector__XXX
+
+BO_ 2566897651 CHARGING_INFORMATION1: 8 Vector__XXX
+ SG_ CHG_total_energy_charging_gun : 32|32@1+ (0.1,0) [0|429496729.5] " kWh" Vector__XXX
+ SG_ CHG_Swap_charge_times : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ CHG_number_of_charging_time : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2566835187 BMS_BATTERY_FAILURE_INFORMATION: 8 Vector__XXX
+ SG_ BMS_High_voltage_interlock_fail : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Recharge_storage_mismatch : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_SOC_jump_alarm : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_SOC_too_low_alarm : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_SOC_too_high_alarm : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_temperature_difference_alarm : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Low_battery_alarm : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Battery_high_temperature : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Single_pressure_difference : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Cell_voltage_undervoltage : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Monomer_overvoltage_alarm : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Battery_voltage_too_low : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Battery_overcharge : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Insulation_alarm : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Charging_socket_over_temp : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Charging_gun_connect_status : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_self_check_status : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566849523 INS_DTC_and_POWERLIMIT: 8 Vector__XXX
+ SG_ INS_Driving_recharge_limit : 32|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ INS_Driving_discharge_limit : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ INS_BMS_fault_here : 24|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ INS_DTC_CODE : 8|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ INS_battery_failure_level : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2566849267 INS_CELLVOLTAGE_AND_TEMP_: 8 Vector__XXX
+ SG_ INS_MinTemp_BoxLocation : 58|6@1+ (1,1) [1|64] "" Vector__XXX
+ SG_ INS_Min_BatteryTemperature : 50|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ INS_MaxTemp_BoxLocation : 44|6@1+ (1,1) [1|64] "" Vector__XXX
+ SG_ INS_Max_BatteryTemperature : 36|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ INS_MinVoltCell_BoxLocation : 30|6@1+ (1,1) [1|64] "" Vector__XXX
+ SG_ INS_Min_cell_voltage : 18|12@1+ (1.5,0) [0|6142.5] "mV" Vector__XXX
+ SG_ INS_MaxVoltCell_BoxLocation : 12|6@1+ (1,1) [1|64] "" Vector__XXX
+ SG_ INS_Max_cell_voltage : 0|12@1+ (1.5,0) [0|6142.5] "mV" Vector__XXX
+
+BO_ 2566849011 INS_BATTERY_METER: 8 Vector__XXX
+ SG_ Batt_indicator_light : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Batt_Insul_Resistance : 40|16@1+ (0.1,0) [0|6553.5] "KOhm" Vector__XXX
+ SG_ Batt_Volt_INS : 24|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ Batt_Current_INS : 8|16@1+ (0.1,-400) [-400|6153.5] "A" Vector__XXX
+ SG_ Batt_SOC_INS : 0|8@1+ (1,0) [0|255] " %" Vector__XXX
+
+BO_ 2566835443 BMS_BATTERY_CELL_INFORMATION: 8 Vector__XXX
+ SG_ BMS_Average_Temperature : 32|8@1+ (1,-50) [-50|205] " mV" Vector__XXX
+ SG_ BMS_Cell_Average_Voltage : 12|16@1+ (1,0) [0|65535] " mV" Vector__XXX
+ SG_ BMS_SingleCellVoltage_sum : 0|12@1+ (0.2,0) [0|819] " V" Vector__XXX
+
+BO_ 2566893811 BMS_CONTACTOR_STATUS: 8 Vector__XXX
+ SG_ BMS_Relay_TotalNegativePreflight : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_TMS_Contactor : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_FastChargeNegative3 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_FastChargePositive3 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_HeatingNegative : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_HeatingPositive2 : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_HeatingPositive1 : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_FastChargeNegative2 : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_FastChargeNegative1 : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_FastChargePositive2 : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_FastChargePositive1 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_DriveMotor2precharged : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_DriveMotor1precharged : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_Main_PosContactor2 : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_main_contactor1 : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_Overall_Negative : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_Relay_Overall_Positive : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566893555 BMS_BATTERY_INFORMATION4: 8 Vector__XXX
+ SG_ BMS_Single_charge_Energy : 48|16@1+ (0.1,0) [0|6553.5] "kWh" Vector__XXX
+ SG_ BMS_BrakeFeedbackEnergy : 40|8@1+ (1,0) [0|255] "kWh" Vector__XXX
+ SG_ BMS_acumulativeChargingEnergy : 20|20@1+ (1,0) [0|1048575] "kWh" Vector__XXX
+ SG_ BMS_cumulativeBattOutputEnergy : 0|20@1+ (1,0) [0|1048575] "kWh" Vector__XXX
+
+BO_ 2566892787 BMS_BATTERY_INFORMATION3: 8 Vector__XXX
+ SG_ BMS_Battery_Type : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Battery_Protocol_Version : 56|8@1+ (0.1,0) [0|25.5] " prefix V" Vector__XXX
+ SG_ BMS_Battery_Cooling_Method : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_battery_system_total_energy : 32|12@1+ (0.2,0) [0|819] "kWh" Vector__XXX
+ SG_ BMS_battery_system_voltage : 20|12@1+ (0.2,0) [0|819] "V" Vector__XXX
+ SG_ BMS_battery_system_capacity : 8|12@1+ (0.5,0) [0|2047.5] " Ah" Vector__XXX
+ SG_ BMS_battery_manufacturers : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566892275 BMS_BATTERY_INFORMATION2: 8 Vector__XXX
+ SG_ BMS_Battery_Code_Length : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Batt_Subsystem_SerialNumber : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_encoding_transmit_sequence : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2566892019 BMS_BATTERY_INFORMATION1: 8 Vector__XXX
+ SG_ BMS_Remaining_ChargeTime : 52|12@1+ (1,1) [1|4096] " minute" Vector__XXX
+ SG_ BMS_TotalNumber_of_Monomers : 36|16@1+ (1,1) [1|65536] "" Vector__XXX
+ SG_ BMS_TotalNumber_of_BatterySystem : 32|4@1+ (1,1) [1|16] "" Vector__XXX
+ SG_ BMS_TotalNumber_of_String_System : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Battery_Charge_Status : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Total_BatterySystem_Failure : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Number_of_BatterySubsystem : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566893299 CHARGING_SOCKET_STATUS: 8 Vector__XXX
+ SG_ CHG_Neg_FastChargingSocket3_Temp : 56|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ CHG_Pos_FastChargingSocket3_Temp : 48|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ CHG_Neg_FastChargingSocket2_Temp : 40|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ CHG_Pos_FastChargingSocket2_Temp : 32|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ CHG_Neg_SlowChargingSocket_Temp : 24|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ CHG_Pos_SlowChargingSocket_Temp : 16|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ CHG_Neg_FastChargingSocket_Temp : 8|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ CHG_Pos_FastChargingSocket_Temp : 0|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+
+BO_ 2566891763 BMS_Pack_Insulation_Resistance: 8 Vector__XXX
+ SG_ BMS_Neg_Insulation_Resistance : 48|16@1+ (1,0) [0|65535] "kOhm" Vector__XXX
+ SG_ BMS_Pos_Insulation_Resistance : 32|16@1+ (1,0) [0|65535] "kOhm" Vector__XXX
+ SG_ BMS_Insulation_Failure_Class : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Insulation_monitor_Status : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Insulation_detector_LifeSig : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566891507 BMS_LIMIT_STATE2: 8 Vector__XXX
+ SG_ BMS_Min_Cell_Volt_Limit : 40|8@1+ (30,0) [0|7650] "mV" Vector__XXX
+ SG_ BMS_Max_Cell_Volt_Limit : 32|8@1+ (30,0) [0|7650] "mV" Vector__XXX
+ SG_ BMS_MaxLimit_Charging_Current : 56|8@1+ (3,0) [0|765] " A" Vector__XXX
+ SG_ BMS_MaxLimit_Charging_Voltage : 48|8@1+ (3,0) [0|765] " V" Vector__XXX
+ SG_ BMS_Min_Cell_Temp_Limit : 24|8@1+ (30,-50) [-50|7600] " C" Vector__XXX
+ SG_ BMS_Max_Cell_Temp_Limit : 16|8@1+ (30,-50) [-50|7600] " C" Vector__XXX
+ SG_ BMS_Max30sDischargePowerLimit : 8|8@1+ (2.5,0) [0|637.5] "kW" Vector__XXX
+ SG_ BMS_Max60sDischargePowerLimit : 0|8@1+ (2.5,0) [0|637.5] "kW" Vector__XXX
+
+BO_ 2566891251 BMS_LIMIT_STATE1: 8 Vector__XXX
+ SG_ BMS_Max_Discharge_Current : 48|16@1+ (1,0) [0|1500] "A" Vector__XXX
+ SG_ BMS_Min_Cell_Voltage_Limit : 36|12@1+ (0.0015,0) [0|6.1425] "V" Vector__XXX
+ SG_ BMS_Max_Cell_Voltage_Limit : 24|12@1+ (0.0015,0) [0|6.1425] "V" Vector__XXX
+ SG_ BMS_Min_Pack_Voltage_Limit : 12|12@1+ (0.2,0) [0|819] "V" Vector__XXX
+ SG_ BMS_Max_Pack_Voltage_Limit : 0|12@1+ (0.2,0) [0|819] "V" Vector__XXX
+
+BO_ 2566899187 BCU_Cell_temperature_limit_state: 8 Vector__XXX
+ SG_ BCU_Probe_Total_Number : 48|16@1+ (1,0) [0|400] "" Vector__XXX
+ SG_ BCU_Min_temp_probe_Number : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_Min_Temp_Battery : 32|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ BCU_Min_temp_probe_BoxNumber : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_Max_temp_probe_Number : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_Max_Temp_Battery : 8|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ BCU_Max_temp_probe_BoxNumber : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566898675 BCU_Min_Cell_Voltage_Limits: 8 Vector__XXX
+ SG_ BCU_Min_cell_volt_SectionNumber : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_Minimum_cell_Voltage_number : 24|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BCU_Minimum_cell_voltage : 8|16@1+ (1,0) [0|65535] " mV" Vector__XXX
+ SG_ BCU_Min_cell_volt_BoxLocation : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566898163 BCU_Max_Cell_Voltage_Limits: 8 Vector__XXX
+ SG_ BCU_Max_cell_volt_SectionNumber : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_Maximum_cell_Voltage_number : 24|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BCU_Maximum_cell_voltage : 8|16@1+ (1,0) [0|65535] " mV" Vector__XXX
+ SG_ BCU_Max_cell_volt_BoxLocation : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566890483 BCU_BATTERY_PACK_STATUS2: 8 Vector__XXX
+ SG_ BCU_software_version_number : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_software_status : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCU_slave_number : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_Number_of_battery_boxes : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_25to32_slave_online_status : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_17to24_slave_online_status : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_9to16_slave_online_status : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BCU_1to8_slave_online_status : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566890227 BCU_BATTERY_PACK_STATUS1: 8 Vector__XXX
+ SG_ BCU_SOH : 48|8@1+ (0.5,0) [0|127.5] " %" Vector__XXX
+ SG_ BCU_SOC : 40|8@1+ (0.5,0) [0|127.5] " %" Vector__XXX
+ SG_ BCU_Current : 24|16@1+ (0.035,-1000) [-1000|1293.725] " A" Vector__XXX
+ SG_ BCU_Battery_Voltage_PostRelay : 12|12@1+ (0.2,0) [0|819] " V" Vector__XXX
+ SG_ BCU_Battery_Voltage_BeforeRelay : 0|12@1+ (0.2,0) [0|819] " V" Vector__XXX
+
+BO_ 2566889971 BCU_STATE: 8 Vector__XXX
+ SG_ BCU_Life_count : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BCU_Residual_Capacity : 48|12@1+ (0.5,0) [0|2047.5] "Ah" Vector__XXX
+ SG_ BCU_Pack_Internal_Resistance : 32|16@1+ (0.001,0) [0|65.535] " Ohm" Vector__XXX
+ SG_ BCU_Request_CutOff_High : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCU_Battery_Power : 16|16@1+ (0.05,-1500) [-1500|1776.75] " kW" Vector__XXX
+ SG_ BCU_Balancing_Lockout_Status : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCU_Fault_Status : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BCU_Battery_Mode : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BCU_Battery_Status : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2352742816 BMS_VCU_COMMAND: 8 Vector__XXX
+ SG_ BMS_Battery_LifeCount : 52|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_Battery_locked_Status : 48|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_Replacement_Battery_Status : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_Battery_Swap_Status : 40|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_MCU_DCside_Current : 24|16@1+ (0.1,-2000) [-2000|4553.5] "A" Vector__XXX
+ SG_ BMS_MCU_InputVoltage : 8|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ BMS_MainNegContactor_Request : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_MainContactor_Request : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2350948518 VCU_INFO2: 8 Vector__XXX
+ SG_ VCU_Mileage : 16|24@1+ (0.1,0) [0|1677721.5] "km" Vector__XXX
+
+BO_ 2297434272 VCU_INFO1: 8 Vector__XXX
+ SG_ VCU_VehicleSpeed : 48|16@1+ (0.1,-50) [-50|6503.5] " km/h" Vector__XXX
+
+BO_ 2353795232 VCU_COMMAND1: 8 Vector__XXX
+ SG_ VCU_Rotational_Speed : 48|16@1+ (1,-20000) [-20000|45535] "RPM" Vector__XXX
+ SG_ VCU_Torque : 32|16@1+ (1,-5000) [-5000|60535] "NM" Vector__XXX
+ SG_ VCU_Power_limit : 24|8@1+ (3,0) [0|765] "kW" Vector__XXX
+ SG_ VCU_Brake_Pedal_Status : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_Hand_Brake : 20|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_PTO_Status : 5|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_Gear : 16|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VCU_ABS_State : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_Shift_Enable : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_Self_Learning_Status : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_Control_Mode : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_Fast_discharge_enables : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_PTO_Request : 3|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_Vehicle_Ready : 1|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_MCU_Enable : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566857456 TCU_STATUS3: 8 Vector__XXX
+ SG_ TCU_vehicle_slope_value : 16|8@1+ (1,-50) [-50|205] "%" Vector__XXX
+ SG_ TCU_vehicle_acceleration : 0|16@1+ (0.0025,-100) [-100|63.8375] "m/s2" Vector__XXX
+
+BO_ 2566877680 MCU_MOTOR_INFORMATION: 8 Vector__XXX
+
+BO_ 2566869488 MCU_STATUS2: 8 Vector__XXX
+ SG_ MCU_Torque_Limit_GenerateMode : 48|16@1+ (1,0) [0|65535] "NM" Vector__XXX
+ SG_ MCU_Torque_Limit_DriveMode : 32|16@1+ (1,0) [0|65535] "NM" Vector__XXX
+ SG_ MCU_Current : 16|16@1+ (0.1,-1000) [-1000|5553.5] " A" Vector__XXX
+ SG_ MCU_Voltage : 0|16@1+ (0.1,0) [0|6553.5] " V" Vector__XXX
+
+BO_ 2566865392 MCU_STATUS1: 8 Vector__XXX
+ SG_ MCU_Motor_discharge_feedback : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU_Life : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Work_Mode : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_IGBT_status : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU_Motor_Status : 48|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Motor_AC_Current : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ MCU_Motor_Torque : 16|16@1+ (1,-5000) [-5000|60535] "NM" Vector__XXX
+ SG_ MCU_Motor_Speed : 0|16@1+ (1,-20000) [-20000|45535] "RPM" Vector__XXX
+
+BO_ 2566857200 TCU_STATUS1: 8 Vector__XXX
+ SG_ TCU_Tras_OutputSpeed : 48|16@1+ (0.125,0) [0|8191.875] " RPM" Vector__XXX
+ SG_ TCU_Tras_InputSpeed : 32|16@1+ (0.125,0) [0|8191.875] " RPM" Vector__XXX
+ SG_ TCU_Shift_Step : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ TCU_Allow_Precharge : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TCU_Shift_Error : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TCU_Shift_Status : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TCU_Shift_Requests : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TCU_AMT_MODE : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TCU_Ready_State : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TCU_Current_Gear : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2353799328 VCU_COMMAND2: 8 Vector__XXX
+ SG_ VCU_Life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_Pressure_Rear_AirTank : 40|8@1+ (0.01,0) [0|2.55] " Mpa" Vector__XXX
+ SG_ VCU_Pressure_Front_AirTank : 32|8@1+ (0.01,0) [0|2.55] " Mpa" Vector__XXX
+ SG_ VCU_ABS_Speed : 16|16@1+ (0.00390625,0) [0|255.99609375] " km/h" Vector__XXX
+ SG_ VCU_Brake_Padel : 8|8@1+ (1,0) [0|255] " %" Vector__XXX
+ SG_ VCU_Accel_Padel : 0|8@1+ (1,0) [0|255] " %" Vector__XXX
+
+BO_ 2566873584 MCU_STATUS3: 8 Vector__XXX
+ SG_ MCU_Efficiency_Power : 48|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ MCU_Power_Motor : 32|16@1+ (1,-1000) [-1000|64535] " kW" Vector__XXX
+ SG_ MCU_Motor_temp : 8|8@1+ (1,-40) [-40|215] " C" Vector__XXX
+ SG_ MCU_MCU_temp : 0|8@1+ (1,-40) [-40|215] " C" Vector__XXX
+
+
+
+CM_ SG_ 2297430176 HV_AV_EleCconsume "Average power consumption";
+CM_ SG_ 2365577129 HV_Relay_AirConditioning "oil pump and air pump";
+CM_ SG_ 2365577129 HV_Relay_PTC2 "oil pump and air pump";
+CM_ SG_ 2365577129 HV_Relay_PTC1 "oil pump and air pump";
+CM_ SG_ 2365577129 HV_Relay_Accessories_Oil_Airpump "oil pump and air pump";
+CM_ SG_ 2356008868 HV_Air_pump_signal "AC voltage";
+CM_ SG_ 2356008868 HV_Air_pump_motor_temperature "AC voltage";
+CM_ SG_ 2356008868 HV_Air_pump_motor_torque "Alternating current";
+CM_ SG_ 2356008868 HV_Air_pump_motor_current "Alternating current";
+CM_ SG_ 2356008868 HV_Air_pump_motor_voltage "AC voltage";
+CM_ SG_ 2354960291 HV_Oil_pump_signal "AC voltage";
+CM_ SG_ 2354960291 HV_Oil_pump_motor_temperature "AC voltage";
+CM_ SG_ 2354960291 HV_Oil_pump_motor_torque "Alternating current";
+CM_ SG_ 2354960291 HV_Oil_pump_motor_current "Alternating current";
+CM_ SG_ 2354960291 HV_Oil_pump_motor_voltage "AC voltage";
+CM_ SG_ 2566849523 INS_Driving_recharge_limit "For the fault code, please refer to the fault information list";
+CM_ SG_ 2566849523 INS_Driving_discharge_limit "For the fault code, please refer to the fault information list";
+CM_ SG_ 2566849523 INS_BMS_fault_here "For the fault code, please refer to the fault information list";
+CM_ SG_ 2566849523 INS_DTC_CODE "For the fault code, please refer to the fault information list";
+CM_ SG_ 2566892275 BMS_Battery_Code_Length "0Indicates not to upload the code";
+CM_ SG_ 2566891763 BMS_Neg_Insulation_Resistance "Each time a frame is sent, it is automatically incremented by 1.";
+CM_ SG_ 2566891763 BMS_Pos_Insulation_Resistance "Each time a frame is sent, it is automatically incremented by 1.";
+CM_ SG_ 2566891763 BMS_Insulation_Failure_Class "Each time a frame is sent, it is automatically incremented by 1.";
+CM_ SG_ 2566891763 BMS_Insulation_monitor_Status "Each time a frame is sent, it is automatically incremented by 1.";
+CM_ SG_ 2566891763 BMS_Insulation_detector_LifeSig "Each time a frame is sent, it is automatically incremented by 1.";
+CM_ SG_ 2566890483 BCU_software_version_number "Binary in 8 bit";
+CM_ SG_ 2566890483 BCU_software_status "slave control range1~250";
+CM_ SG_ 2566890483 BCU_slave_number "slave control range1~250";
+CM_ SG_ 2566890483 BCU_Number_of_battery_boxes "The total number of battery pack boxes1~32";
+CM_ SG_ 2566890483 BCU_25to32_slave_online_status "Binary in 8 bit";
+CM_ SG_ 2566890483 BCU_17to24_slave_online_status "Binary in 8 bit";
+CM_ SG_ 2566890483 BCU_9to16_slave_online_status "Binary in 8 bit";
+CM_ SG_ 2566890483 BCU_1to8_slave_online_status "Binary in 8 bit";
+CM_ SG_ 2566890227 BCU_SOH "Positive current means discharging the
+battery, negative current means charging the battery.";
+CM_ SG_ 2566890227 BCU_SOC "Positive current means discharging the
+battery, negative current means charging the battery.";
+CM_ SG_ 2566890227 BCU_Current "Positive current means discharging the
+battery, negative current means charging the battery.";
+CM_ SG_ 2566890227 BCU_Battery_Voltage_PostRelay "front of contactor)
+Battery Voltage(pre
+contactors)";
+CM_ SG_ 2566890227 BCU_Battery_Voltage_BeforeRelay "front of contactor)
+Battery Voltage(pre
+contactors)";
+CM_ SG_ 2566889971 BCU_Life_count "Positive current means discharging the
+battery, negative current means charging the battery.";
+CM_ SG_ 2566889971 BCU_Residual_Capacity "Positive current means discharging the
+battery, negative current means charging the battery.";
+CM_ SG_ 2566889971 BCU_Pack_Internal_Resistance "Positive current means discharging the
+battery, negative current means charging the battery.";
+CM_ SG_ 2566889971 BCU_Battery_Power "Positive current means discharging the
+battery, negative current means charging the battery.";
+CM_ SG_ 2352742816 BMS_MCU_DCside_Current "Motor controller bus current for BMS over
+Stream protection is used";
+CM_ SG_ 2352742816 BMS_MCU_InputVoltage "Motor
+controller bus voltage, forBMScontrol
+Control the main relay reference";
+CM_ SG_ 2353795232 VCU_PTO_Status "power take-off status";
+CM_ SG_ 2353795232 VCU_PTO_Request "power take-off request";
+CM_ SG_ 2566869488 MCU_Torque_Limit_GenerateMode "(motor controller mother
+line voltage)";
+CM_ SG_ 2566869488 MCU_Torque_Limit_DriveMode "(motor controller mother
+line voltage)";
+CM_ SG_ 2566869488 MCU_Current "(motor controller mother
+line voltage)";
+CM_ SG_ 2566869488 MCU_Voltage "(motor controller mother
+line voltage)";
+CM_ SG_ 2566865392 MCU_Motor_AC_Current "(motor AC side power flow, RMS value of alternating current";
+CM_ SG_ 2566857200 TCU_Tras_OutputSpeed "(gearbox input turns
+speed";
+CM_ SG_ 2566857200 TCU_Tras_InputSpeed "(gearbox input turns
+speed";
+CM_ SG_ 2353799328 VCU_ABS_Speed "The average speed of the front axle is for reference only";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 2297430176 HV_Vehicle_failure_level 3 "3level failure" 2 "2level alarm" 1 "1level alarm" 0 "No trouble" ;
+VAL_ 2297430176 HV_Accessory_Contactor_Directive 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2297430176 HV_AirConditioner_Contactor 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2297430176 HV_PTC1_Contactor 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2297430176 HV_PTC2_Contactor 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2297430176 HV_MainDrive_precharge_contactor 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2297430176 HV_Main_drive_positive_contactor 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2297430176 HV_Bodywork_PreChargedContactor 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2297430176 HV_Bodywork_main_pos_contactor 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2365577129 HV_Relay_AirConditioning 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2365577129 HV_Relay_PTC2 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2365577129 HV_Relay_PTC1 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2365577129 HV_Relay_Accessories_Oil_Airpump 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2365577129 HV_Relay_Bodywork 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2365577129 HV_Relay_Bodywork_Precharge 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2365577129 HV_Relay_Main_drive 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2365577129 HV_Relay_Main_drive_precharge 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566824101 HV_DTC_DCDC_failure_class 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "No trouble" ;
+VAL_ 2566824101 HV_DTC_Communication_TimedOut 1 "Failure" 0 "Normal" ;
+VAL_ 2566824101 HV_DTC_limited_power 1 "Failure" 0 "Normal" ;
+VAL_ 2566824101 HV_DTC_hardware_malfunction 1 "Failure" 0 "Normal" ;
+VAL_ 2566824101 HV_DTC_Over_temperature 1 "Failure" 0 "Normal" ;
+VAL_ 2566824101 HV_DTC_Output_short_circuit 1 "Failure" 0 "Normal" ;
+VAL_ 2566824101 HV_DTC_Output_overcurrent 1 "Failure" 0 "Normal" ;
+VAL_ 2566824101 HV_DTC_Output_current_limit 1 "Failure" 0 "Normal" ;
+VAL_ 2566824101 HV_DTC_output_undervoltage 1 "Failure" 0 "Normal" ;
+VAL_ 2566824101 HV_DTC_output_overvoltage 1 "Failure" 0 "Normal" ;
+VAL_ 2566824101 HV_DTC_Input_overvoltage 1 "Failure" 0 "Normal" ;
+VAL_ 2566824101 HV_DTC_Input_undervoltage 1 "Failure" 0 "Normal" ;
+VAL_ 2566824101 HV_DCDC_working_status 3 "reserved " 2 "fault" 1 "work" 0 "standby" ;
+VAL_ 2355943332 HV_AirPump_Controller_Fault 1 "Failure" 0 "Normal" ;
+VAL_ 2355943332 HV_DTC_failure_class 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "No trouble" ;
+VAL_ 2355943332 HV_DTC_Fault_temperatureSensor 1 "Failure" 0 "Normal" ;
+VAL_ 2355943332 HV_DTC_Relay_pull_in_often 1 "Failure" 0 "Normal" ;
+VAL_ 2355943332 HV_DTC_Self_check_exception 1 "Failure" 0 "Normal" ;
+VAL_ 2355943332 HV_DTC_Controller_overheat 1 "Failure" 0 "Normal" ;
+VAL_ 2355943332 HV_DTC_output_phase_loss 1 "Failure" 0 "Normal" ;
+VAL_ 2355943332 HV_DTC_Short_circuit_protection 1 "Failure" 0 "Normal" ;
+VAL_ 2355943332 HV_DTC_disconnection 1 "Failure" 0 "Normal" ;
+VAL_ 2355943332 HV_DTC_undervoltage 1 "Failure" 0 "Normal" ;
+VAL_ 2355943332 HV_DTC_overload 1 "Failure" 0 "Normal" ;
+VAL_ 2355943332 HV_DTC_overvoltage 1 "Failure" 0 "Normal" ;
+VAL_ 2355943332 HV_DTC_overcurrent 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_OilPump_Controller_Fault 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_DTC_failure_class 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "No trouble" ;
+VAL_ 2354894755 HV_DTC_Fault_temperatureSensor 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_DTC_Relay_pull_in_often 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_DTC_Self_check_exception 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_DTC_Controller_overheat 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_DTC_output_phase_loss 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_DTC_Short_circuit_protection 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_DTC_disconnection 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_DTC_undervoltage 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_DTC_overload 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_DTC_overvoltage 1 "Failure" 0 "Normal" ;
+VAL_ 2354894755 HV_DTC_overcurrent 1 "Failure" 0 "Normal" ;
+VAL_ 2352750752 HV_AC_compressor_enable 3 "Undefined" 2 "Speed control" 1 "Torque control" 0 "Disable" ;
+VAL_ 2352750752 HV_DCDC_Enable 2 "DCDCEnable" 1 "undefined" 0 "DCDCDisable" ;
+VAL_ 2352750752 HV_AirPump_Enable 3 "Undefined" 2 "Speed control" 1 "Torque control" 0 "Disable" ;
+VAL_ 2352750752 HV_OilPump_Enable 3 "Undefined" 2 "Speed control" 1 "Torque control" 0 "Disable" ;
+VAL_ 2566835187 BMS_High_voltage_interlock_fail 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_Recharge_storage_mismatch 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_SOC_jump_alarm 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_SOC_too_low_alarm 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_SOC_too_high_alarm 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_temperature_difference_alarm 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_Low_battery_alarm 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_Battery_high_temperature 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_Single_pressure_difference 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_Cell_voltage_undervoltage 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_Monomer_overvoltage_alarm 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_Battery_voltage_too_low 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_Battery_overcharge 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_Insulation_alarm 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_Charging_socket_over_temp 3 "Level 3 failure" 2 "Level 2 failure" 1 "Level 1 failure" 0 "Normal" ;
+VAL_ 2566835187 BMS_Charging_gun_connect_status 3 "DC multi-tip connection" 2 "DC single tip connection" 1 "AC tip connection" 0 "not connected" ;
+VAL_ 2566835187 BMS_self_check_status 2 " Self-test failed" 1 " Self-check succeeded" 0 "Self-checking" ;
+VAL_ 2566849523 INS_Driving_recharge_limit 4 "limp" 3 "25% power limit" 2 "50% power limit" 1 "70% power limit" 0 "unlimited" ;
+VAL_ 2566849523 INS_Driving_discharge_limit 4 "limp" 3 "25% power limit" 2 "50% power limit" 1 "70% power limit" 0 "unlimited" ;
+VAL_ 2566849523 INS_BMS_fault_here 3 "Start to prohibit high voltage" 2 "High voltage 35S power off" 1 "request high pressure;" 0 "No fault, no processing;" ;
+VAL_ 2566849523 INS_battery_failure_level 3 "critical failure" 2 "Secondary fault" 1 "Minor failure" 0 "NO error" ;
+VAL_ 2566893811 BMS_Relay_TotalNegativePreflight 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_TMS_Contactor 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_FastChargeNegative3 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_FastChargePositive3 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_HeatingNegative 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_HeatingPositive2 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_HeatingPositive1 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_FastChargeNegative2 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_FastChargeNegative1 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_FastChargePositive2 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_FastChargePositive1 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_DriveMotor2precharged 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_DriveMotor1precharged 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_Main_PosContactor2 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_main_contactor1 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_Overall_Negative 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566893811 BMS_Relay_Overall_Positive 3 "No such relay" 2 "Relay adhesion" 1 "The relay is closed" 0 "Relay disconnected" ;
+VAL_ 2566892787 BMS_Battery_Type 8 "other on board energy storage" 7 "The fuel cell" 6 "Lithium titanate battery" 5 ",Super capacitor" 4 "Rd" 3 "ternary lithium battery" 2 ", Lithium cobalt oxide battery" 1 "lithium manganate battery" 0 "lithium iron phosphate" ;
+VAL_ 2566892787 BMS_Battery_Cooling_Method 3 "other methods" 2 "liquid cooling" 1 "air cooling" 0 "natural cooling" ;
+VAL_ 2566892787 BMS_battery_manufacturers 30 "Mengguli" 29 "Aerospace Power" 28 " lion" 27 "Zhejiang Aoyou" 26 "Beijing Guoneng" 25 "Suzhou Quantity" 24 "Zhenjiang Lixin" 23 "Wuhan Liwei" 22 "Tianjin Lishen" 21 "Ankor" 20 "Shenzhen Waterma" 19 "create a great" 18 "camel" 17 "Hunan Miaosheng" 16 "Thornton, Hunan" 15 "Chuhan New Energy" 14 "Jiangsu Haisida" 13 "Shandong Weineng" 12 "ZTE Paineng" 11 "Hefei Guoxuan" 10 " Polyfluoride" 9 "Chuangyuan Tiandi" 8 "Guangzhou Libai;" 7 "AVIC lithium battery" 6 "Boston" 5 "Hypovision" 4 "Central Europe Power" 3 "Beijing Keyi" 2 "Chaowei Chuangyuan" 1 "Zhengyun" 0 "CATL" ;
+VAL_ 2566892019 BMS_Battery_Charge_Status 4 "Charging at the swap station" 3 " The charging is completed;" 2 "Uncharged state;" 1 "Driving and charging;" 0 " Parking and charging" ;
+VAL_ 2566891763 BMS_Insulation_Failure_Class 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "No trouble" ;
+VAL_ 2566891763 BMS_Insulation_monitor_Status 1 "not work properly" 0 "Works fine" ;
+VAL_ 2566890483 BCU_software_status 1 "batch status" 0 "sample state" ;
+VAL_ 2566889971 BCU_Request_CutOff_High 1 "request to cut off high voltage" 0 "no cutoff requested" ;
+VAL_ 2566889971 BCU_Balancing_Lockout_Status 1 "Equalization on" 0 "disable equalization" ;
+VAL_ 2566889971 BCU_Fault_Status 3 "3level failure" 2 "2level alarm" 1 "1level alarm" 0 "No trouble" ;
+VAL_ 2566889971 BCU_Battery_Mode 9 "ACThe gun is not charged" 8 "DCThe gun is not charged" 7 "ACcharging mode" 6 "DCcharging mode" 5 "maintenance mode" 4 "reserved" 3 "discharge" 2 "wait for high pressure" 1 "self-diagnosis" 0 "Boot Up" ;
+VAL_ 2566889971 BCU_Battery_Status 4 "disconnected due to the fault" 3 "Close the main contactor" 2 "Precharge process" 1 "Disconnect the main contactor" 0 "initialize" ;
+VAL_ 2352742816 BMS_Battery_locked_Status 2 "All unlocked" 1 "Partially lock in place" 0 "All lock in place" ;
+VAL_ 2352742816 BMS_Replacement_Battery_Status 1 "Battery Swap" 0 "Not Replaced" ;
+VAL_ 2352742816 BMS_Battery_Swap_Status 1 "Battery Swap" 0 "Not Replaced" ;
+VAL_ 2352742816 BMS_MainNegContactor_Request 3 "Reserve" 2 "Reserve" 1 "Open MainNegativeContactor" 0 "Close MainNegativeContactor" ;
+VAL_ 2352742816 BMS_MainContactor_Request 3 "Reserve" 2 "Reserve" 1 "Close MainPositiveContactor" 0 "Disconnect MainPositiveContactor" ;
+VAL_ 2353795232 VCU_Brake_Pedal_Status 1 "enable(with feet brake)" 0 "disable(without feet brake)" ;
+VAL_ 2353795232 VCU_Hand_Brake 1 "enable(Handbrake pull
+rise)" 0 "disable(handbrake not pulled)" ;
+VAL_ 2353795232 VCU_PTO_Status 3 "invalid" 2 "Mistake" 1 "hung up" 0 "not hung" ;
+VAL_ 2353795232 VCU_Gear 21 "Gear_P" 20 "Gear_D" 19 "Gear_R" 18 "Manual downshift -" 17 "Manual upshift+" 16 "maintain current gear" 3 "economic" 2 "climbing gear" 1 "sport gear" 0 "Gear_N" ;
+VAL_ 2353795232 VCU_ABS_State 3 "invalid" 2 "Mistake" 1 "ABShas worked" 0 "ABSnot working" ;
+VAL_ 2353795232 VCU_Shift_Enable 3 "invalid" 2 "Mistake" 1 "allow shifting" 0 "Shifting is not allowed" ;
+VAL_ 2353795232 VCU_Self_Learning_Status 3 "invalid" 2 "Rotational self-learning error" 1 "Allows self-learning resolvers" 0 "Resolver selflearn not allow" ;
+VAL_ 2353795232 VCU_Control_Mode 3 "Resolver self-learning mode" 2 "torque control" 1 "speed control" 0 "no control(since by mode)" ;
+VAL_ 2353795232 VCU_Fast_discharge_enables 1 "Enable Allow fast discharge" 0 "Disable Not allow fast discharge" ;
+VAL_ 2353795232 VCU_PTO_Request 3 "Invalid" 2 "Mistake" 1 "hung up" 0 "not hung" ;
+VAL_ 2353795232 VCU_Vehicle_Ready 3 "Invalid" 2 "Mistake" 1 "The vehicle has beenReady" 0 "vehicle notReady" ;
+VAL_ 2353795232 VCU_MCU_Enable 1 "enable(control)" 0 "disable(out of control
+system)" ;
+VAL_ 2566865392 MCU_Motor_discharge_feedback 2 "Drain complete" 1 "discharge" 0 "not vented" ;
+VAL_ 2566865392 MCU_Work_Mode 10 "other modes" 9 "free mode" 8 "Resolver self-learning mode" 7 "MCUlow pressure" 6 "Rapidly under high voltage" 5 "Motor Torque Mode Operation" 4 "Motor speed mode operation" 3 "The motor is allowed to run" 2 "High voltage power-on completed" 1 "Low-voltage power-on completed" 0 "initialization" ;
+VAL_ 2566865392 MCU_IGBT_status 1 "enable state" 0 "Disabled state" ;
+VAL_ 2566865392 MCU_Motor_Status 15 "Invalid" 14 "Abnormal" 4 "ready state (Ready) " 3 "Disabled" 2 "Power Generation Energy Recovery" 1 "Power consumption driving state" 0 "0" ;
+VAL_ 2566857200 TCU_Allow_Precharge 3 "Invalid" 2 "Mistake" 1 "Allow precharge" 0 "Precharging is not allowe" ;
+VAL_ 2566857200 TCU_Shift_Error 3 "Invalid" 2 "Mistake" 1 "Shift mismatch" 0 "Shift matching" ;
+VAL_ 2566857200 TCU_Shift_Status 3 "Invalid" 2 "Mistake" 1 "Shifting gears" 0 "Shift complete" ;
+VAL_ 2566857200 TCU_Shift_Requests 3 "Invalid" 2 "Mistake" 1 "request a shift" 0 "no request
+shift" ;
+VAL_ 2566857200 TCU_AMT_MODE 3 "Invalid" 2 "Mistake" 1 "Manual transmission" 0 "Automatic transmission" ;
+VAL_ 2566857200 TCU_Ready_State 3 "Invalid" 2 "Mistake" 1 "TCU ready" 0 "TCU not Ready" ;
+VAL_ 2566857200 TCU_Current_Gear 15 "Gear invalid" 14 "P gear" 13 "R gear" 12 "12th gear" 11 "11th gear" 10 "10th gear" 9 "9th gear" 8 "8th gear" 7 "7th gear" 6 "6th gear" 5 "5th gear" 4 "4th gear" 3 "3rd gear" 2 "2nd gear" 1 "1st gear" 0 "N gear" ;
+

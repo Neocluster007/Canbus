@@ -1,0 +1,750 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: INS VCU BMS
+VAL_TABLE_ VCU_Power_off_request 3 "Reserve" 2 "Reserve" 1 "Power-on" 0 "Power off" ;
+VAL_TABLE_ VCU_Main_contact_request 3 "Reserve" 2 "Reserve" 1 "Close the main contactor" 0 "Disconnect the main contactor" ;
+VAL_TABLE_ DCDC_Output_enable 1 "DC is on" 0 "DC is off." ;
+VAL_TABLE_ DCDC_state 3 "Reserve" 2 "Fault" 1 "Work" 0 "Standby" ;
+VAL_TABLE_ CC_resistance 5 "100Ohm (63A/70A)" 4 "220 Ohm (32A)" 3 "680 Ohm (16A)" 2 "1500 Ohm (10A)" 1 "Semi-connection" 0 "No connection" ;
+VAL_TABLE_ CF_Bms_S2_On_Req 1 "request to close S2" 0 "request to open S2" ;
+VAL_TABLE_ CF_CP_status 4 "C2 (6V PWM)" 3 "C1 (6V DC)" 2 "B2 (9V PWM)" 1 "B1 (9V DC)" 0 "A (no gun inserted)" ;
+VAL_TABLE_ CF_Secc_DCAC_ChgMode 2 "AC charging mode" 1 "DC charging mode" 0 "Charging is prohibited" ;
+VAL_TABLE_ OBC_CC_Resistance 5 "100. (64A)" 4 "220Q (32A)" 3 "680 Q (16A)" 2 "1500Q (10A)" 1 "Semi-connection" 0 "No connection " ;
+VAL_TABLE_ Relay_disconnect_Close 1 "Close" 0 "Disconnect" ;
+VAL_TABLE_ MCU_Power_takeoff_switch_status 2 "abnormal" 1 "Output" 0 "No output" ;
+VAL_TABLE_ MCU_Work_Mode 8 "Error (fault protection)" 7 "LowVoltage_PWR_DWN" 6 "Active Discharge" 5 "Torque Control " 4 "Speed Control" 3 "Idle" 2 "(Reserved)" 1 "LowVoltage_PWR_UP_Normal" 0 " INIT" ;
+VAL_TABLE_ Disable_Enable 1 "Enable" 0 "Disable" ;
+VAL_TABLE_ MCU_Mode 4 "Abnormal" 3 "Ready state " 2 "Closed state" 1 "Power generation" 0 "Power consumption " ;
+VAL_TABLE_ INS_Safe_Belt 1 "Seat belt insertion" 0 "Seat belt detachment" ;
+VAL_TABLE_ INS_Emer_Signal 1 "Double flash away" 0 "Double flash off" ;
+VAL_TABLE_ INS_Central_Lock 1 "Central lock open" 0 "Central control lock" ;
+VAL_TABLE_ INS_ABRS_Signal 1 "Airbag failure" 0 "Airbag is normal" ;
+VAL_TABLE_ INS_Car_Door 1 "Car_Door" 0 "Car door closed" ;
+VAL_TABLE_ INS_Brake_Error 1 "Brake failure" 0 "The brake is normal" ;
+VAL_TABLE_ INS_Low_voltage 1 "12VBattery is low" 0 "12VBattery is normal" ;
+VAL_TABLE_ INS_Handbrake 1 "Handbrake start" 0 "Handbrake off" ;
+VAL_TABLE_ Alarm 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_TABLE_ Failure 1 "Fail" 0 "Not Fail" ;
+VAL_TABLE_ Gear_position_Shift_Location 17 "Hil Climbing 11" 16 "Advance D 10" 5 "Back R 5" 4 "Energy Saving E+4" 3 "Energy Saving E3" 2 "Sport S 2" 1 "Parking P 1" 0 "GAP N 0" ;
+VAL_TABLE_ Vehicle_Key_Status 3 "START" 2 "ON" 1 "ACC" 0 "LOCK" ;
+VAL_TABLE_ Voice_prompt 1 "Beepring" 0 "Beepstop" ;
+VAL_TABLE_ LED_Alarm 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_TABLE_ LED_batt_charging_indicator 3 "Lights up when battery is low" 2 "Flashes when charging" 1 "reserved" 0 "Always off" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ SW_TinvIGBT1_Over : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566889715 VCU_Command: 8 Vector__XXX
+ SG_ VCU_Main_contact_request : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_Power_off_request : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Reserved_4bit : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ VCU_MCU_Input_voltage : 8|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
+ SG_ VCU_Motor_AC_side_current : 24|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
+
+BO_ 2566889971 VCU_DCDC_Message2: 8 Vector__XXX
+ SG_ DCDC_Output_enable : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2566824176 DCDC_VCU_Status_Message2: 8 Vector__XXX
+ SG_ DCDC_version_number : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_CAN_Commu_vital_signs : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_Communication_timeout : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Power_limit : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_hardware_malfunction : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved_1bit : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Over_temperature_warning : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_short_circuit_warning : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Output_overcurrent : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Output_current_limit : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Output_undervoltage : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Output_overvoltage : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Input_overvoltage : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Input_undervoltage : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved_6bit : 2|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ DCDC_state : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566889712 DCDC_VCU_Status_Message1: 8 Vector__XXX
+ SG_ DCDC_body_temperature : 48|8@1+ (1,-40) [-40|215] " C" Vector__XXX
+ SG_ DCDC_input_voltage : 32|16@1+ (0.1,0) [0|6553.5] " A" Vector__XXX
+ SG_ DCDC_output_current : 16|16@1+ (0.1,0) [0|6553.5] " A" Vector__XXX
+ SG_ DCDC_output_voltage : 0|16@1+ (0.1,0) [0|6553.5] " V" Vector__XXX
+
+BO_ 2621462260 BMS_to_PLC: 8 Vector__XXX
+ SG_ CF_CC_resistance : 16|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CF_Bms_S2_On_Req : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved_1Byte : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2621437014 PLC_to_BMS: 8 Vector__XXX
+ SG_ CR_Secc_EVSEMaxPowerLimit : 48|16@1+ (10,0) [0|655350] " W" Vector__XXX
+ SG_ CR_Secc_EvseOutVolt : 32|16@1+ (0.1,0) [0|6553.5] " V" Vector__XXX
+ SG_ OBC_CP_duty_cycleD : 24|8@1+ (1,0) [0|255] " %" Vector__XXX
+ SG_ CR_Secc_AC_MaxCurrent : 16|8@1+ (1,0) [0|255] " A" Vector__XXX
+ SG_ Reserved_1Byte : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CF_CP_status : 4|4@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CF_Secc_DCAC_ChgMode : 2|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved_1bit : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CF_Secc_S2_State : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2550654452 BMS_OBC: 8 Vector__XXX
+ SG_ OBC_Pre_charge : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_Heating_system_different : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_High_voltage_relay : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_Batt_Temp_TooLow : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_Batt_Temp_TooHigh : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_Insulation_Fail : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_Charging_base_temp : 16|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ OBC_S2_switch_state : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ OBC_CC_resistance : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ OBC_CP_duty_cycleD : 0|8@1+ (1,0) [0|255] " %" Vector__XXX
+
+BO_ 2365523464 MCU_STATUS5: 8 Vector__XXX
+ SG_ MCU_Live_counter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Power_takeoff_switch_status : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MCU_Gearbox_output_shaft_speed : 40|16@1+ (1,-15000) [-15000|50535] " rpm" Vector__XXX
+ SG_ Reserved_3byte : 16|24@1+ (1,0) [0|16777215] "" Vector__XXX
+ SG_ MCU_DTC_Code : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2365523208 ISG_Information2: 8 Vector__XXX
+ SG_ MCU_Factory_week : 56|8@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ MCU_Year_of_manufacture : 48|8@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ MCU_serial_number : 16|32@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ MCU_batch_number : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2365522696 MCU_STATUS4: 8 Vector__XXX
+ SG_ HW_OTT_IGBT3 : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HW_OTT_IGBT2 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HW_OTT_IGBT1 : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HW_OTT_IGBT : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HW_OVT_DCL : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Faults_Idc_Over : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Warning_Idc_Over : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Speed_Over : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Phase_Fault : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Iac3_Over : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Iac2_Over : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Iac1_Over : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Iac_Over : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HW_UVT_IAP : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HW_UVT_AP : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HW_HVIL : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HW_ALL : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Udc_Isolation : 36|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_ActiveDischarge : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Speed_Over : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_TinvPCB_Over : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_TinvIGBT3_Over : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_TinvIGBT2_Over : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_TinvIGBT1_Over : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_TinvIGBT_Over : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Udc_Under : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Udc_Over : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_TempMotor_Over : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Iac3_Over : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Iac2_Over : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Iac1_Over : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Iac_Over : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Torque_Security : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_TinvIGBT3 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_TinvIGBT2 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_TinvIGBT1 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_TinvIGBT : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_TinvPCB : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_Udc : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_Iac3 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_Iac2 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_Iac1 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_Iac : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_TempMotor : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Sensor_Resolver : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_CAN : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_ShortCircuit3P : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Speed_Over : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_TinvPCB_Over : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_TinvIGBT_Over : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Udc_Under : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Udc_Over : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_TempMotor_Over : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SW_Torque_MotorStall : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2365522440 MCU_STATUS3: 8 Vector__XXX
+ SG_ MCU_Diagnostic_Trouble_Code : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ MCU_Live_counter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Reserved_Half_Byte : 56|4@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MCU_Motor_Rotation_Count : 48|8@1+ (1,0) [0|255] " change" Vector__XXX
+ SG_ MCU_DC_Voltage : 32|16@1+ (0.1,0) [0|6553.5] " V" Vector__XXX
+ SG_ MCU_DC_Current : 16|16@1+ (1,-1000) [-1000|64535] " A" Vector__XXX
+
+BO_ 2365521928 MCU_STATUS1: 8 Vector__XXX
+ SG_ MCU_Live_counter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Work_Mode : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Reserved_1bit : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Active_Discharge_Feedback : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Precharge_Allow : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_Mode : 48|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_Motor_ACCurrent : 32|16@1+ (0.1,0) [0|6553.5] " A" Vector__XXX
+ SG_ MCU_Motor_Torque : 16|16@1+ (1,-5000) [-5000|60535] " N.m" Vector__XXX
+ SG_ MCU_Motor_Speed : 0|16@1+ (1,-15000) [-15000|50535] " rpm" Vector__XXX
+
+BO_ 2350948518 INS_Status_1: 8 Vector__XXX
+ SG_ INS_Clock_battery_low : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INS_Flash_Fault : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INS_Instrument_controller_fail : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved_2Byte : 40|16@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ INS_Total_mileage : 16|24@1+ (2,0) [0|33554430] " km" Vector__XXX
+ SG_ INS_Safe_Belt : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INS_Emer_Signal : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INS_Central_Lock : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INS_ABRS_Signal : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INS_Car_Door : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INS_Brake_Error : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INS_12V_Low : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INS_Hand_Brake : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INS_Life : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2215641248 VCU_Failure_1: 8 Vector__XXX
+ SG_ Alarm_TCS_ASR_close : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_Save_reset_tire_pressure : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_PTC_temperature_abnormal : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_Ramp_assist_exit : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_Ramp_assist_activate : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_ramp_assist_park_function : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_upgrade_complete : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_During_system_upgrade : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_Electronic_handbrake_fail : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_Temp_charge_socket_high : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_Brake_pad_worn : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_vehicle_PowerOn : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_pull_handbrake_park_ramp : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_vehicle_out_of_order : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_key_not_detected : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm__vehicle_is_Speeding : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved1bit : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_handbrake_not_released : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_Please_maintain_InTime : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved_1bit : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_Tire_pressure_low : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_fasten_seat_belt : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_Please_N_Shift : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Alarm_Please_depress_brake : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved_2Byte : 24|16@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ FAIL_Simultaneous_pedals : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_battery_model_abnormal : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_Motor_model_abnormal : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_battery_temperature : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_auxiliary_battery : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_DC_Fault : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_Air_conditioner_fail : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_EPS_Fault : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_Gearbox_failure : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_Vacuum_pump_fail : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_HV_contactor_fail : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_instrument_bus_disconnect : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_sensor_power_supply : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_HV_interlock_circuit_break : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_vehicle_controller_fault : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_Insulation_resistance : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_Accel_pedal_Malfunction : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_Brake_pedal_failure : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_MCU_Off : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_Total_BMS_Off : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_Motor_failure : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_Serious_battery_failure : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_motor_overheat : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FAIL_battery_TooHot : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2297561248 VCU_Status_1: 8 Vector__XXX
+ SG_ VCU_Brake_State : 56|8@1+ (1,0) [0|255] " %" Vector__XXX
+ SG_ VCU_Pedal_State : 48|8@1+ (1,0) [0|255] " %" Vector__XXX
+ SG_ Vehicle_Speed : 40|8@1+ (1,-50) [-50|205] " km/hr" Vector__XXX
+ SG_ Vehicle_Key_Status : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Gear_position_Shift_Location : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2551293600 VCU_Instrument_Control_2: 8 Vector__XXX
+ SG_ VCU_Instant_PowerConsume : 40|8@1+ (0.5,0) [0|127.5] " kWh/100km" Vector__XXX
+ SG_ VCU_AVG_PowerConsume : 32|8@1+ (0.5,0) [0|127.5] " kWh/100km" Vector__XXX
+ SG_ VCU_Remaining_Range : 24|8@1+ (2,0) [0|510] " km" Vector__XXX
+ SG_ VCU_Limit_Speed : 16|8@1+ (1,0) [0|255] " km/h" Vector__XXX
+ SG_ LED_Ramp_assist_parking : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Vacuum_BrakePump : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Speed_limit_mode : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_AutoCruise_mode : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Motor_temp_TooHigh : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Regen_braking : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_System_Error : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Vehicle_Ready_state : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved1bit : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_TCS_activation : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved_1bit : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Drive_Power_Limit : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_LowSpeedBeep_off : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Timed_charging : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Power_batt_temp : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Motor_failure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2551228064 VCU_Instrument_Control_1: 8 Vector__XXX
+ SG_ VCU_Voice_prompt : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Power_battery_failure : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_SOC_Low_alarm : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Low_batt_volt_alarm : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Vehicle_insulation_alarm : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Charging_connect : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_Charging_Status : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Batt_Cell_Max_Temp : 48|8@1+ (1,-50) [-50|205] " C" Vector__XXX
+ SG_ Batt_Volt_INS : 24|16@1+ (0.1,0) [0|6553.5] " V" Vector__XXX
+ SG_ Batt_Insul_Resistance : 40|8@1+ (1,0) [0|255] " M ohm" Vector__XXX
+ SG_ Batt_Current_INS : 8|16@1- (0.1,-400) [-3676.8|2876.7] " A" Vector__XXX
+ SG_ Batt_SOC_INS : 0|8@1+ (1,0) [0|100] " %" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 2566889715 VCU_Power_off_request "The value will be sent after the driver turns off the key 0, There will be 1~3s Power-off delay, which is required in this phase BCU Save data as soon as possible";
+CM_ SG_ 2566889715 VCU_MCU_Input_voltage "Motor controller bus voltage, for BMS Control main relay reference";
+CM_ SG_ 2566889715 VCU_Motor_AC_side_current "Motor AC bus current for BMS Overcurrent protection use";
+CM_ SG_ 2566889971 DCDC_Output_enable "3:DCDC Enable;the remaining:DCDC Disable.
+Delay after enable 5S Boot up";
+CM_ SG_ 2566824176 DCDC_version_number "The initial version is A0, If there is a change, it will be incremented, such as
+A1,A2...";
+CM_ SG_ 2566824176 DCDC_state "Standby:00;Work:01;
+Fault:10;Reserve:11.";
+CM_ SG_ 2621462260 CF_CC_resistance "During the whole charging process, send in real time";
+CM_ SG_ 2621462260 CF_Bms_S2_On_Req "When the EVCC charging mode is not 0x0, EVCC operates the S2 switch according to this value";
+CM_ SG_ 2365523464 MCU_Power_takeoff_switch_status "00: No output
+01: Output
+03:abnormal
+";
+CM_ SG_ 2365523464 MCU_Gearbox_output_shaft_speed "The positive or negative rotation speed indicates the rotation direction of the motor, and the rotation speed is The timing is consistent with the forward and rotating direction of the vehicle.";
+CM_ SG_ 2365523464 Reserved_3byte "TCU Error code";
+CM_ SG_ 2365523464 MCU_DTC_Code "TCU Error code";
+CM_ SG_ 2365523208 MCU_Factory_week "16: 2016 year";
+CM_ SG_ 2365523208 MCU_Year_of_manufacture "16: 2016 year";
+CM_ SG_ 2365523208 MCU_serial_number "SCOPE: 0-4, 294, 967, 295";
+CM_ SG_ 2365522696 HW_OTT_IGBT3 "Hardware controller C phase IGBT over temperature fault	?C>110";
+CM_ SG_ 2365522696 HW_OTT_IGBT2 "Hardware controller phase B IGBT over temperature fault	?C>110";
+CM_ SG_ 2365522696 HW_OTT_IGBT1 "Hardware controller A phase IGBT over temperature fault	?C>110";
+CM_ SG_ 2365522696 HW_OTT_IGBT "Hardware controller IGBT over temperature fault	?C>110";
+CM_ SG_ 2365522696 HW_OVT_DCL "Control voltage overvoltage fault";
+CM_ SG_ 2365522696 MCU_Faults_Idc_Over "DC DC overcurrent protection";
+CM_ SG_ 2365522696 MCU_Warning_Idc_Over "DC DC overcurrent alarm";
+CM_ SG_ 2365522696 SW_Speed_Over "Motor overspeed fault	rpm>6500rpmMotor overspeed protection	rpm	>6500Motor overspeed alarm rpm	>6000";
+CM_ SG_ 2365522696 MCU_Phase_Fault "Output phase failure";
+CM_ SG_ 2365522696 SW_Iac3_Over "Motor over current alarm C phase	Arms	>500Motor overcurrent fault C phase Arms	>580";
+CM_ SG_ 2365522696 SW_Iac2_Over "Motor overcurrent alarm B phase	Arms>500Motor overcurrent fault B phase Arms	>580";
+CM_ SG_ 2365522696 SW_Iac1_Over "Motor overcurrent alarm Phase A	Arms	>500Motor overcurrent fault A phase Arms	>580";
+CM_ SG_ 2365522696 SW_Iac_Over "Motor overcurrent alarm	Arms	>500Motor overcurrent fault Arms>580";
+CM_ SG_ 2365522696 HW_UVT_IAP "Control board weak current output undervoltage fault";
+CM_ SG_ 2365522696 HW_UVT_AP "Control voltage undervoltage fault";
+CM_ SG_ 2365522696 HW_HVIL "Hardware failure of high voltage interlock circuit";
+CM_ SG_ 2365522696 HW_ALL "Hardware failure (total failure bits)";
+CM_ SG_ 2365522696 SW_Udc_Isolation "DC-to-ground insulation fault";
+CM_ SG_ 2365522696 SW_ActiveDischarge "Active discharge failure";
+CM_ SG_ 2365522696 SW_TinvPCB_Over "Control board over-temperature protection (PCB) ?C>105Control board over temperature alarm (PCB) ?C>85";
+CM_ SG_ 2365522696 SW_TinvIGBT3_Over "Controller over temperature protection (IGBT) phase C	?C>105";
+CM_ SG_ 2365522696 SW_TinvIGBT2_Over "Controller over temperature protection (IGBT) phase B	?C>105";
+CM_ SG_ 2365522696 SW_TinvIGBT1_Over "Controller over temperature protection (IGBT) phase A	?C>105";
+CM_ SG_ 2365522696 SW_TinvIGBT_Over "Controller over temperature protection (IGBT)	?C>105Controller over temperature alarm (IGBT) ?C>85";
+CM_ SG_ 2365522696 SW_Udc_Under "DC voltage undervoltage fault V<270DC voltage undervoltage alarm V<270";
+CM_ SG_ 2365522696 SW_Udc_Over "DC voltage overvoltage fault	 V>420DC voltage overvoltage alarm V>400";
+CM_ SG_ 2365522696 SW_TempMotor_Over "Motor over temperature fault ?C>170Motor over temperature alarm ?C>150";
+CM_ SG_ 2365522696 SW_Torque_Security "Torque safety failure";
+CM_ SG_ 2365522696 SW_Sensor_TinvIGBT3 "Controller IGBT temperature sensor failure C Mutually";
+CM_ SG_ 2365522696 SW_Sensor_TinvIGBT2 "Controller IGBT temperature sensor failure B Mutually";
+CM_ SG_ 2365522696 SW_Sensor_TinvIGBT1 "Controller IGBT temperature sensor failure A Mutually";
+CM_ SG_ 2365522696 SW_Sensor_TinvIGBT "Controller IGBT temperature sensor failure";
+CM_ SG_ 2365522696 SW_Sensor_TinvPCB "Controller PCB temperature sensor failure";
+CM_ SG_ 2365522696 SW_Sensor_Udc "Voltage sensor failure";
+CM_ SG_ 2365522696 SW_Sensor_Iac3 "Current sensor fault C phase";
+CM_ SG_ 2365522696 SW_Sensor_Iac2 "Current sensor fault B phase";
+CM_ SG_ 2365522696 SW_Sensor_Iac1 "Current sensor fault A phase";
+CM_ SG_ 2365522696 SW_Sensor_Iac "Current sensor failure";
+CM_ SG_ 2365522696 SW_Sensor_TempMotor "Motor temperature sensor failure";
+CM_ SG_ 2365522696 SW_Sensor_Resolver "Resolver failure";
+CM_ SG_ 2365522696 SW_CAN "CAN communication failure";
+CM_ SG_ 2365522696 SW_ShortCircuit3P "Three-phase short circuit V>500";
+CM_ SG_ 2365522696 SW_Torque_MotorStall "Motor stall alarm ";
+CM_ SG_ 2365522440 MCU_Diagnostic_Trouble_Code "Error code
+Diagnostic Trouble Code
+";
+CM_ SG_ 2365522440 MCU_Motor_Rotation_Count "The number of motor revolutions is counted cyclically, and it will return to 2550. The revolution counter is used to record how many revolutions have been made";
+CM_ SG_ 2365522440 MCU_DC_Voltage "DC voltage";
+CM_ SG_ 2365522440 MCU_DC_Current "DC current (estimated value), motor drive The status is positive and the power generation status is negative.";
+CM_ SG_ 2365521928 MCU_Work_Mode "0: Initial
+1: Low voltage power on is normal
+3: The motor is allowed to run
+5: Motor torque closed loop operation 6: Power down strong current (active discharge) 7: Power down weak current (high voltage below 36V) 8: Error (fault protection)
+";
+CM_ SG_ 2365521928 MCU_IGBT_Enable_Feedback "IGBT enable status feedback";
+CM_ SG_ 2365521928 MCU_Active_Discharge_Feedback "Active discharge feedback";
+CM_ SG_ 2365521928 MCU_Precharge_Allow "Allow pre-charging";
+CM_ SG_ 2365521928 MCU_Mode "1. Power consumption 2. Power generation 3. Closed state
+4. Ready state 5. Abnormal
+";
+CM_ SG_ 2365521928 MCU_Motor_ACCurrent "AC side current RMS feedback AC Current R MS valuefeedback";
+CM_ SG_ 2365521928 MCU_Motor_Torque "When the torque is timing, the direction of the torque is the same as the forward direction of the vehicle.";
+CM_ SG_ 2365521928 MCU_Motor_Speed "The positive or negative motor speed indicates the direction of rotation of the motor. When the speed is positive, it is consistent with the forward rotation direction of the vehicle.";
+CM_ SG_ 2350948518 INS_Clock_battery_low "Clock battery is low";
+CM_ SG_ 2350948518 INS_Flash_Fault "Flash Fault";
+CM_ SG_ 2350948518 INS_Instrument_controller_fail "Instrument controller failure";
+CM_ SG_ 2350948518 INS_Total_mileage "Signs of life, add every cycle 1";
+CM_ SG_ 2350948518 INS_Safe_Belt "Safe_Belt";
+CM_ SG_ 2350948518 INS_Emer_Signal "Emer_Signal";
+CM_ SG_ 2350948518 INS_Central_Lock "Central_Lock";
+CM_ SG_ 2350948518 INS_ABRS_Signal "ABRS_Signal";
+CM_ SG_ 2350948518 INS_Car_Door "Car_Door";
+CM_ SG_ 2350948518 INS_Brake_Error "Brake_Error";
+CM_ SG_ 2350948518 INS_12V_Low "12V_Low";
+CM_ SG_ 2350948518 INS_Hand_Brake "1 Handbrake start
+0 Handbrake off
+";
+CM_ SG_ 2350948518 INS_Life "Signs of life, add every cycle 1";
+CM_ SG_ 2215641248 Alarm_TCS_ASR_close "TCS/ASR function is closed, driving stability will be affected";
+CM_ SG_ 2215641248 Alarm_Save_reset_tire_pressure "Save tire pressure data, reset tire pressure alarm";
+CM_ SG_ 2215641248 Alarm_PTC_temperature_abnormal "PTC temperature is abnormal";
+CM_ SG_ 2215641248 Alarm_Ramp_assist_exit "The ramp assist parking is about to exit, please tighten the handbrake!";
+CM_ SG_ 2215641248 Alarm_Ramp_assist_activate "The ramp assist parking has been activated!";
+CM_ SG_ 2215641248 Alarm_ramp_assist_park_function "To activate the ramp assist parking function, please fasten your seat belt and close the door!";
+CM_ SG_ 2215641248 Alarm_upgrade_complete "The upgrade is complete, please turn off the power of the vehicle!";
+CM_ SG_ 2215641248 Alarm_During_system_upgrade "During the system upgrade, please do not cut off the power supply or start the vehicle!";
+CM_ SG_ 2215641248 Alarm_Electronic_handbrake_fail "Electronic handbrake failure!";
+CM_ SG_ 2215641248 Alarm_Temp_charge_socket_high "The temperature of the charging socket is too high!";
+CM_ SG_ 2215641248 Alarm_Brake_pad_worn "The brake pads are worn too much, please replace them in time!";
+CM_ SG_ 2215641248 Alarm_vehicle_PowerOn "The vehicle is powered on, please do not leave the cab";
+CM_ SG_ 2215641248 Alarm_pull_handbrake_park_ramp "Please pull the handbrake when parking on a ramp!";
+CM_ SG_ 2215641248 Alarm_vehicle_out_of_order "The whole vehicle is out of order, please pull over and park safely!";
+CM_ SG_ 2215641248 Alarm_key_not_detected "The key is not detected!";
+CM_ SG_ 2215641248 Alarm__vehicle_is_Speeding "The vehicle is speeding!";
+CM_ SG_ 2215641248 Alarm_handbrake_not_released "The handbrake is not released!";
+CM_ SG_ 2215641248 Alarm_Please_maintain_InTime "Please maintain it in time!";
+CM_ SG_ 2215641248 Alarm_Tire_pressure_low "Tire pressure is too low!";
+CM_ SG_ 2215641248 Alarm_fasten_seat_belt "Please fasten your seat belt!";
+CM_ SG_ 2215641248 Alarm_Please_N_Shift "Please placeNFile orPfiles!";
+CM_ SG_ 2215641248 Alarm_Please_depress_brake "The auxiliary battery is abnormal!";
+CM_ SG_ 2215641248 FAIL_Simultaneous_pedals "Simultaneous brake and throttle
+ask
+";
+CM_ SG_ 2215641248 FAIL_battery_model_abnormal "The battery model does not match!";
+CM_ SG_ 2215641248 FAIL_Motor_model_abnormal "Motor model does not match
+Or the motor works abnormally
+";
+CM_ SG_ 2215641248 FAIL_battery_temperature "The battery temperature is abnormal! (Fire extinguisher report)";
+CM_ SG_ 2215641248 FAIL_auxiliary_battery "The auxiliary battery is abnormal!";
+CM_ SG_ 2215641248 FAIL_DC_Fault "DC Fault!";
+CM_ SG_ 2215641248 FAIL_Air_conditioner_fail "Air conditioner failure!";
+CM_ SG_ 2215641248 FAIL_EPS_Fault "(Oil pump) EPS Fault!";
+CM_ SG_ 2215641248 FAIL_Gearbox_failure "Gearbox failure";
+CM_ SG_ 2215641248 FAIL_Vacuum_pump_fail "(Air pump) Vacuum pump failure!";
+CM_ SG_ 2215641248 FAIL_HV_contactor_fail "High-voltage contactor failure!";
+CM_ SG_ 2215641248 FAIL_instrument_bus_disconnect "The instrument bus is disconnected!";
+CM_ SG_ 2215641248 FAIL_sensor_power_supply "The sensor power supply is abnormal!";
+CM_ SG_ 2215641248 FAIL_HV_interlock_circuit_break "High voltage interlock circuit break!";
+CM_ SG_ 2215641248 FAIL_vehicle_controller_fault "The vehicle controller is faulty!";
+CM_ SG_ 2215641248 FAIL_Insulation_resistance "Insulation resistance is too low!";
+CM_ SG_ 2215641248 FAIL_Accel_pedal_Malfunction "The accelerator pedal is malfunctioning!";
+CM_ SG_ 2215641248 FAIL_Brake_pedal_failure "Brake pedal failure!";
+CM_ SG_ 2215641248 FAIL_MCU_Off "Motor Controller bus
+Get out!
+";
+CM_ SG_ 2215641248 FAIL_Total_BMS_Off "Total battery management system
+The line is off!
+";
+CM_ SG_ 2215641248 FAIL_Motor_failure "Motor failure!";
+CM_ SG_ 2215641248 FAIL_Serious_battery_failure "Serious battery failure!";
+CM_ SG_ 2215641248 FAIL_motor_overheat "The motor is overheated!";
+CM_ SG_ 2215641248 FAIL_battery_TooHot "The battery is too hot!";
+CM_ SG_ 2297561248 VCU_Brake_State "Brake_State";
+CM_ SG_ 2297561248 VCU_Pedal_State "Pedal_State";
+CM_ SG_ 2297561248 Vehicle_Speed "Calculate vehicle speed";
+CM_ SG_ 2297561248 Vehicle_Key_Status "Vehicle key position Key_Status";
+CM_ SG_ 2297561248 Gear_position_Shift_Location "Vehicle gear position Shift_Location";
+CM_ SG_ 2551293600 VCU_Instant_PowerConsume "Instantaneous power consumption";
+CM_ SG_ 2551293600 VCU_AVG_PowerConsume "Average power consumption";
+CM_ SG_ 2551293600 VCU_Remaining_Range "Remaining mileage";
+CM_ SG_ 2551293600 VCU_Limit_Speed "cruise/Speed limit";
+CM_ SG_ 2551293600 LED_Ramp_assist_parking "Ramp assisted parking
+1:Lights up when auxiliary ramp starts
+0:Always off";
+CM_ SG_ 2551293600 LED_Vacuum_BrakePump "Vacuum brake pump pressure
+1:Lights up when the pressure is abnormal , Sound alarm
+0:Always off
+
+0.5s sound, 0.2s stop, duration 20s";
+CM_ SG_ 2551293600 LED_Speed_limit_mode "Speed limit mode
+1:Sound alarm when speed is limited
+0:Always off
+
+Sound for 0.5s, stop for 0.5s, continue until the fault disappears";
+CM_ SG_ 2551293600 LED_AutoCruise_mode "Auto cruise mode
+1:Lights up when cruising
+0:Always off";
+CM_ SG_ 2551293600 LED_Motor_temp_TooHigh "Motor temperature is too high
+1:Lights up when the temperature is high, audible alarm
+0:Always off
+ ";
+CM_ SG_ 2551293600 LED_Regen_braking "Regenerative braking
+1:Regenerative braking is on
+0:Always off
+";
+CM_ SG_ 2551293600 LED_System_Error "system error
+1:System failure lights up and audible alarm
+0:Always off
+
+0.2s sound, 0.2s stop, duration 30s";
+CM_ SG_ 2551293600 LED_Vehicle_Ready_state "Vehicle power state
+1:Power preparation,Readygreen
+0:Power disconnect,Readyyellow
+When changing from 0 to 1, it will beep for 1.5 seconds";
+CM_ SG_ 2551293600 LED_TCS_activation "1: Poor road adhesion, 0.3 cycles of flashing during TCS work
+0: Always off
+";
+CM_ SG_ 2551293600 LED_Drive_Power_Limit "Drive power limit
+1: Lights up when driving power limit and driving mode is limp home
+0: Always off
+";
+CM_ SG_ 2551293600 LED_LowSpeedBeep_off "Low speed beep off
+1: The indicator light is on when closed
+0: open (Always off)
+";
+CM_ SG_ 2551293600 LED_Timed_charging "Timed charging
+1: Timed charging turns on and lights up
+0:Always off
+";
+CM_ SG_ 2551293600 LED_Power_batt_temp "Power battery temperature is too high
+1: The temperature of the power battery is too highWhen the light is on, the light is on and the sound alarms
+0:Always off, silent
+";
+CM_ SG_ 2551293600 LED_Motor_failure "Motor failure
+1:Electricity machineTherefore barrier When the indicator light is on, the sound alarm
+0:Always off, silent
+
+0.5s sound, 0.2s stop, duration 20s";
+CM_ BO_ 2551228064 "Vehicle instrument control frame(1)";
+CM_ SG_ 2551228064 VCU_Voice_prompt "Voice prompt
+1:Beepring
+0:Beepstop
+Press message; 1 ring, 0 stop.";
+CM_ SG_ 2551228064 LED_Power_battery_failure "Power battery failure
+1:Electricity Pool Therefore barrier Hour indicator lights up, sound alarm
+0:Always off, silent
+ 
+0.5s sound, 0.2s stop, duration 20s";
+CM_ SG_ 2551228064 LED_SOC_Low_alarm "SOCLow alarm
+1:SOCThe indicator light is on when it is low, and the sound alarm
+0:Always off, silent
+Text prompt: The battery is low, and the cooling/heating function of the air conditioner is limited";
+CM_ SG_ 2551228064 LED_Low_batt_volt_alarm "Monomer/Low battery voltage alarm
+1:monomer/When the battery pack voltage is low, the indicator light will be on and the sound will alarm
+0:Always off, silent";
+CM_ SG_ 2551228064 LED_Vehicle_insulation_alarm "Vehicle insulation alarm
+1:Absolutely edge Electricity Hinder drop The indicator light is on when it is low, and the sound alarm
+0:Always off, silent
+
+0.2s sound, 0.2s stop, duration 30s";
+CM_ SG_ 2551228064 LED_Charging_connect "Charging connection indication
+1:Charge Electricity String Insert enter Lit when charging port
+0:Always off
+";
+CM_ SG_ 2551228064 LED_Charging_Status "Power battery charging indicator
+11:Lights up when battery is low
+10:Flashes when charging
+01: reserved
+00:Always off";
+CM_ SG_ 2551228064 Batt_Cell_Max_Temp "Maximum monomer temperature";
+CM_ SG_ 2551228064 Batt_Volt_INS "Total battery voltage";
+CM_ SG_ 2551228064 Batt_Insul_Resistance "Vehicle insulation resistance";
+CM_ SG_ 2551228064 Batt_Current_INS "Battery discharge current";
+CM_ SG_ 2551228064 Batt_SOC_INS "Battery SOC";
+BA_DEF_ SG_  "S2_State" HEX 0 1;
+BA_DEF_  "BusType" HEX 0 0;
+BA_DEF_DEF_  "S2_State" 0;
+BA_DEF_DEF_  "BusType" 0;
+VAL_ 3221225472 SW_TinvIGBT1_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2566889715 VCU_Main_contact_request 3 "Reserve" 2 "Reserve" 1 "Close the main contactor" 0 "Disconnect the main contactor" ;
+VAL_ 2566889715 VCU_Power_off_request 3 "Reserve" 2 "Reserve" 1 "Power-on" 0 "Power off" ;
+VAL_ 2566889971 DCDC_Output_enable 1 "DC is on" 0 "DC is off." ;
+VAL_ 2566824176 DCDC_Communication_timeout 1 "Fail" 0 "Not Fail" ;
+VAL_ 2566824176 DCDC_Power_limit 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2566824176 DCDC_hardware_malfunction 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2566824176 DCDC_Over_temperature_warning 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2566824176 DCDC_short_circuit_warning 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2566824176 DCDC_Output_overcurrent 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2566824176 DCDC_Output_current_limit 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2566824176 DCDC_Output_undervoltage 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2566824176 DCDC_Output_overvoltage 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2566824176 DCDC_Input_overvoltage 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2566824176 DCDC_Input_undervoltage 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2566824176 DCDC_state 3 "Reserve" 2 "Fault" 1 "Work" 0 "Standby" ;
+VAL_ 2621462260 CF_CC_resistance 5 "100Ohm (63A/70A)" 4 "220 Ohm (32A)" 3 "680 Ohm (16A)" 2 "1500 Ohm (10A)" 1 "Semi-connection" 0 "No connection" ;
+VAL_ 2621462260 CF_Bms_S2_On_Req 1 "request to close S2" 0 "request to open S2" ;
+VAL_ 2621437014 CF_Secc_DCAC_ChgMode 2 "AC charging mode" 1 "DC charging mode" 0 "Charging is prohibited" ;
+VAL_ 2621437014 CF_Secc_S2_State 1 "Close" 0 "Disconnect" ;
+VAL_ 2550654452 OBC_Pre_charge 1 "Fail" 0 "Not Fail" ;
+VAL_ 2550654452 OBC_Heating_system_different 1 "Fail" 0 "Not Fail" ;
+VAL_ 2550654452 OBC_High_voltage_relay 1 "Fail" 0 "Not Fail" ;
+VAL_ 2550654452 OBC_Batt_Temp_TooLow 1 "Fail" 0 "Not Fail" ;
+VAL_ 2550654452 OBC_Batt_Temp_TooHigh 1 "Fail" 0 "Not Fail" ;
+VAL_ 2550654452 OBC_Insulation_Fail 1 "Fail" 0 "Not Fail" ;
+VAL_ 2550654452 OBC_S2_switch_state 1 "Close" 0 "Disconnect" ;
+VAL_ 2550654452 OBC_CC_resistance 5 "100. (64A)" 4 "220Q (32A)" 3 "680 Q (16A)" 2 "1500Q (10A)" 1 "Semi-connection" 0 "No connection " ;
+VAL_ 2365522696 HW_OTT_IGBT3 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 HW_OTT_IGBT2 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 HW_OTT_IGBT1 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 HW_OTT_IGBT 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 HW_OVT_DCL 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 MCU_Faults_Idc_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 MCU_Warning_Idc_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Speed_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 MCU_Phase_Fault 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Iac3_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Iac2_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Iac1_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Iac_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 HW_UVT_IAP 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 HW_UVT_AP 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 HW_HVIL 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 HW_ALL 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Udc_Isolation 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_ActiveDischarge 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_TinvPCB_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_TinvIGBT3_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_TinvIGBT2_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_TinvIGBT1_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_TinvIGBT_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Udc_Under 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Udc_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_TempMotor_Over 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Torque_Security 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_TinvIGBT3 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_TinvIGBT2 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_TinvIGBT1 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_TinvIGBT 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_TinvPCB 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_Udc 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_Iac3 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_Iac2 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_Iac1 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_Iac 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_TempMotor 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Sensor_Resolver 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_CAN 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_ShortCircuit3P 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365522696 SW_Torque_MotorStall 1 "Fail" 0 "Not Fail" ;
+VAL_ 2365521928 MCU_Work_Mode 8 "Error (fault protection)" 7 "LowVoltage_PWR_DWN" 6 "Active Discharge" 5 "Torque Control " 4 "Speed Control" 3 "Idle" 2 "(Reserved)" 1 "LowVoltage_PWR_UP_Normal" 0 " INIT" ;
+VAL_ 2365521928 MCU_IGBT_Enable_Feedback 1 "Enable" 0 "Disable" ;
+VAL_ 2365521928 MCU_Active_Discharge_Feedback 1 "Enable" 0 "Disable" ;
+VAL_ 2365521928 MCU_Precharge_Allow 1 "Enable" 0 "Disable" ;
+VAL_ 2365521928 MCU_Mode 4 "Abnormal" 3 "Ready state " 2 "Closed state" 1 "Power generation" 0 "Power consumption " ;
+VAL_ 2350948518 INS_Clock_battery_low 1 "Fail" 0 "Not Fail" ;
+VAL_ 2350948518 INS_Flash_Fault 1 "Fail" 0 "Not Fail" ;
+VAL_ 2350948518 INS_Instrument_controller_fail 1 "Fail" 0 "Not Fail" ;
+VAL_ 2350948518 INS_Safe_Belt 1 "Seat belt insertion" 0 "Seat belt detachment" ;
+VAL_ 2350948518 INS_Emer_Signal 1 "Double flash away" 0 "Double flash off" ;
+VAL_ 2350948518 INS_Central_Lock 1 "Central lock open" 0 "Central control lock" ;
+VAL_ 2350948518 INS_ABRS_Signal 1 "Airbag failure" 0 "Airbag is normal" ;
+VAL_ 2350948518 INS_Car_Door 1 "Car_Door" 0 "Car door closed" ;
+VAL_ 2350948518 INS_Brake_Error 1 "Brake failure" 0 "The brake is normal" ;
+VAL_ 2350948518 INS_12V_Low 1 "12VBattery is low" 0 "12VBattery is normal" ;
+VAL_ 2350948518 INS_Hand_Brake 1 "Handbrake start" 0 "Handbrake off" ;
+VAL_ 2215641248 Alarm_TCS_ASR_close 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_Save_reset_tire_pressure 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_PTC_temperature_abnormal 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_Ramp_assist_exit 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_Ramp_assist_activate 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_ramp_assist_park_function 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_upgrade_complete 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_During_system_upgrade 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_Electronic_handbrake_fail 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_Temp_charge_socket_high 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_Brake_pad_worn 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_vehicle_PowerOn 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_pull_handbrake_park_ramp 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_vehicle_out_of_order 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_key_not_detected 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm__vehicle_is_Speeding 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_handbrake_not_released 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_Please_maintain_InTime 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_Tire_pressure_low 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_fasten_seat_belt 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_Please_N_Shift 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 Alarm_Please_depress_brake 1 "True/Alarm" 0 "Not Alarm" ;
+VAL_ 2215641248 FAIL_Simultaneous_pedals 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_battery_model_abnormal 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_Motor_model_abnormal 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_battery_temperature 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_auxiliary_battery 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_DC_Fault 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_Air_conditioner_fail 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_EPS_Fault 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_Gearbox_failure 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_Vacuum_pump_fail 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_HV_contactor_fail 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_instrument_bus_disconnect 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_sensor_power_supply 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_HV_interlock_circuit_break 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_vehicle_controller_fault 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_Insulation_resistance 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_Accel_pedal_Malfunction 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_Brake_pedal_failure 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_MCU_Off 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_Total_BMS_Off 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_Motor_failure 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_Serious_battery_failure 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_motor_overheat 1 "Fail" 0 "Not Fail" ;
+VAL_ 2215641248 FAIL_battery_TooHot 1 "Fail" 0 "Not Fail" ;
+VAL_ 2297561248 Vehicle_Key_Status 3 "START" 2 "ON" 1 "ACC" 0 "LOCK" ;
+VAL_ 2297561248 Gear_position_Shift_Location 17 "Hil Climbing 11" 16 "Advance D 10" 5 "Back R 5" 4 "Energy Saving E+4" 3 "Energy Saving E3" 2 "Sport S 2" 1 "Parking P 1" 0 "GAP N 0" ;
+VAL_ 2551293600 LED_Ramp_assist_parking 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_Vacuum_BrakePump 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_Speed_limit_mode 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_AutoCruise_mode 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_Motor_temp_TooHigh 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_Regen_braking 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_System_Error 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_Vehicle_Ready_state 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_TCS_activation 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_Drive_Power_Limit 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_LowSpeedBeep_off 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_Timed_charging 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_Power_batt_temp 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551293600 LED_Motor_failure 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551228064 VCU_Voice_prompt 1 "Beepring" 0 "Beepstop" ;
+VAL_ 2551228064 LED_Power_battery_failure 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551228064 LED_SOC_Low_alarm 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551228064 LED_Low_batt_volt_alarm 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551228064 LED_Vehicle_insulation_alarm 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551228064 LED_Charging_connect 1 "Indicator light  ON" 0 "Always off, silent" ;
+VAL_ 2551228064 LED_Charging_Status 3 "Lights up when battery is low" 2 "Flashes when charging" 1 "reserved" 0 "Always off" ;
+

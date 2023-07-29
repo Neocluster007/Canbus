@@ -1,0 +1,163 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: MCU HCU
+
+
+BO_ 2365523464 ISG_STATUS6: 8 Vector__XXX
+ SG_ ISG_MCU6_Reserved_3 : 48|16@1- (1,0) [-32768|32767] "Nm" Vector__XXX
+ SG_ ISG_MCU6_Reserved_2 : 32|16@1- (1,0) [-32768|32767] "Nm" Vector__XXX
+ SG_ ISG_MCU6_Reserved_1 : 16|16@1- (1,0) [-32768|32767] "Nm" Vector__XXX
+ SG_ ISG_MCU6_Reserved_0 : 0|16@1- (1,0) [-32768|32767] "Nm" Vector__XXX
+
+BO_ 2365523208 ISG_STATUS5: 8 Vector__XXX
+ SG_ f32_Cur_Value_Q_Filtered : 48|16@1+ (1,-5000) [-5000|60535] "Nm" Vector__XXX
+ SG_ f32_Cur_Value_D_Filtered : 32|16@1+ (1,-5000) [-5000|60535] "Nm" Vector__XXX
+ SG_ f32_Cur_Q_Ref_Value : 16|16@1+ (1,-5000) [-5000|60535] "Nm" Vector__XXX
+ SG_ f32_Cur_D_Ref_Value : 0|16@1+ (1,-5000) [-5000|60535] "Nm" Vector__XXX
+
+BO_ 2365522952 ISG_STATUS4: 8 Vector__XXX
+ SG_ VeCANR_ui8_Work_Mode : 48|16@1+ (1,0) [0|65535] "Nm" Vector__XXX
+ SG_ f32_volt_ratio : 32|16@1+ (1,0) [0|65535] "Nm" Vector__XXX
+ SG_ f32_Vol_Cmd_Q : 16|16@1+ (1,-5000) [-5000|60535] "Nm" Vector__XXX
+ SG_ f32_Vol_Cmd_D : 0|16@1+ (1,-5000) [-5000|60535] "Nm" Vector__XXX
+
+BO_ 2365522696 ISG_STATUS3: 8 MCU
+ SG_ ISG_Live_counter4 : 60|4@1+ (1,0) [0|0] ""  HCU
+ SG_ ISG_Hardware_Error_Code_6 : 40|8@1+ (1,0) [0|0] ""  HCU
+ SG_ ISG_Hardware_Error_Code_5 : 32|8@1+ (1,0) [0|0] ""  HCU
+ SG_ ISG_Hardware_Error_Code_4 : 24|8@1+ (1,0) [0|0] ""  HCU
+ SG_ ISG_Hardware_Error_Code_3 : 16|8@1+ (1,0) [0|0] ""  HCU
+ SG_ ISG_Hardware_Error_Code_2 : 8|8@1+ (1,0) [0|0] ""  HCU
+ SG_ ISG_Hardware_Error_Code_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2365522440 ISG_STATUS2: 8 MCU
+ SG_ ISG_Live_counter3 : 60|4@1+ (1,0) [0|15] ""  HCU
+ SG_ ISG_Motor_Rotation_Count : 48|8@1+ (1,0) [0|255] ""  HCU
+ SG_ ISG_DC_Voltage : 32|16@1+ (0.1,0) [0|1000] "V"  HCU
+ SG_ ISG_DC_Current : 16|16@1+ (1,-1000) [-1000|64535] "A"  HCU
+ SG_ ISG_DTC_Code : 0|16@1+ (1,0) [0|65535] ""  HCU
+
+BO_ 2365522184 ISG_STATUS1: 8 MCU
+ SG_ ISG_Live_counter2 : 60|4@1+ (1,0) [0|15] ""  HCU
+ SG_ ISG_Fail_Grade : 48|4@1+ (1,0) [0|4] ""  HCU
+ SG_ ISG_Torque_Limit_Low : 32|16@1+ (1,-5000) [-5000|60535] "Nm"  HCU
+ SG_ ISG_Torque_Limit_High : 16|16@1+ (1,0) [0|5000] "Nm"  HCU
+ SG_ ISG_MCU_Temperature : 8|8@1+ (1,-40) [-40|215] "degree Celsius"  HCU
+ SG_ ISG_Motor_Temperature : 0|8@1+ (1,-40) [-40|215] "degree Celsius"  HCU
+
+BO_ 2365521928 ISG_STATUS0: 8 MCU
+ SG_ ISG_Work_Mode : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ISG_IGBT_Enable_Feedback : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ISG_Active_Discharge_Enable_Fdck : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ISG_Precharge_Allow : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ISG_Live_counter1 : 60|4@1+ (1,0) [0|15] ""  HCU
+ SG_ ISG_Motor_AC_Current : 32|16@1- (0.1,0) [-3276.8|3276.7] ""  HCU
+ SG_ ISG_Motor_Torque : 16|16@1+ (1,-5000) [-5000|60535] "Nm"  HCU
+ SG_ ISG_Motor_Speed : 0|16@1+ (1,-15000) [-15000|50535] "rpm"  HCU
+
+BO_ 2365524207 HCU_Command_ISG: 8 HCU
+ SG_ HCU_ISG_FootBrake : 6|1@1+ (1,0) [0|1] ""  MCU
+ SG_ HCU_ISG_HandBrake : 7|1@1+ (1,0) [0|1] ""  MCU
+ SG_ HCU_ISG_Gear : 4|2@1+ (1,0) [0|2] ""  MCU
+ SG_ HCU_ISG_Demand_Speed : 48|16@1+ (1,-15000) [-15000|50535] "rpm"  MCU
+ SG_ HCU_ISG_Demand_Torque : 32|16@1+ (1,-5000) [-5000|60535] "Nm"  MCU
+ SG_ HCU_ISG_DemLimLowNegVal : 20|12@1+ (1,0) [0|4095] "Nm/rpm"  MCU
+ SG_ HCU_ISG_DemaLimHighPosiVal : 8|12@1+ (1,0) [0|4095] "Nm/rpm"  MCU
+ SG_ HCU_ISG_Control_Mode : 2|2@1+ (1,0) [0|3] ""  MCU
+ SG_ HCU_ISG_Fault_Reset : 1|1@1+ (1,0) [0|1] ""  MCU
+ SG_ HCU_ISG_MCU_Enable : 0|1@1+ (1,0) [0|1] ""  MCU
+
+
+
+CM_ BO_ 2365522440 "Period 20ms";
+CM_ BO_ 2365522184 "Period 20ms";
+CM_ SG_ 2365522184 ISG_Fail_Grade "0 = No Fault
+1 = Warning(degraded)
+2 = Fault(zero torque output)
+3 = Fault(shut down MCU)
+4 = Serious Fault(need to stop the vehicle)";
+CM_ SG_ 2365522184 ISG_Torque_Limit_Low "转矩下限";
+CM_ BO_ 2365521928 "Period 20ms";
+CM_ SG_ 2365521928 ISG_Work_Mode "0 = INIT
+1 = LV_PWR_UP
+2 = HV_PWR_UP
+3 = Idle
+4 = Speed Control
+5 = Torque Control
+6 = SHUTDWN(active capacitor discharge)
+7 = LV_PWR_DWN
+8 = FAULT";
+CM_ SG_ 2365521928 ISG_IGBT_Enable_Feedback "0 = disable
+1 = enable";
+CM_ SG_ 2365521928 ISG_Active_Discharge_Enable_Fdck "0 = disable
+1 = enable";
+CM_ SG_ 2365521928 ISG_Precharge_Allow "0 = disable
+1 = enable";
+CM_ SG_ 2365521928 ISG_Motor_Torque "转矩矩大于0为转矩方向与发动机转向相同";
+CM_ SG_ 2365521928 ISG_Motor_Speed "电机转速正负表示电机转向，转速为正时与发动机正常转动方向一致";
+CM_ BO_ 2365524207 "Period 20ms";
+CM_ SG_ 2365524207 HCU_ISG_FootBrake "0:未踩脚刹
+1：踩脚刹";
+CM_ SG_ 2365524207 HCU_ISG_HandBrake "0;未拉手刹
+1：拉手刹";
+CM_ SG_ 2365524207 HCU_ISG_Gear "00:空档位
+01：前进档位
+10：后退档位";
+CM_ SG_ 2365524207 HCU_ISG_DemLimLowNegVal "4X Toruqe, 1X Speed";
+CM_ SG_ 2365524207 HCU_ISG_DemaLimHighPosiVal "4X Toruqe, 1X Speed";
+CM_ SG_ 2365524207 HCU_ISG_Control_Mode "0 = Standby
+1 = Speed Control
+2 = Torque Control
+3 = Active Discharge";
+CM_ SG_ 2365524207 HCU_ISG_Fault_Reset "0 = disable
+1 = enable";
+CM_ SG_ 2365524207 HCU_ISG_MCU_Enable "0 = disable
+1 = enable";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+

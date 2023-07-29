@@ -1,0 +1,97 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 2350948518 Instrument_Status_Frame_1: 8 Vector__XXX
+ SG_ Total_mileage : 16|24@1+ (0.1,0) [0|1677721.5] "km" Vector__XXX
+
+BO_ 2566890995 Peak_Probe_Temp_Status: 6 Vector__XXX
+ SG_ Minimum_Probe_Temp : 28|12@1+ (0.2,-50) [-50|769] "°„C" Vector__XXX
+ SG_ Maximum_Probe_Temp : 16|12@1+ (0.2,-50) [-50|769] "°„C" Vector__XXX
+ SG_ Probe_Average_Temp : 0|16@1+ (0.2,-50) [-50|13057] "°„C" Vector__XXX
+
+BO_ 2566890739 Peak_Cell_Voltage_Status: 6 Vector__XXX
+ SG_ Minimum_cell_voltage : 28|12@1+ (0.0015,0) [0|6.1425] "V" Vector__XXX
+ SG_ Maximum_cell_voltage : 16|12@1+ (0.0015,0) [-3.072|3.0705] "V" Vector__XXX
+ SG_ Single_cell_voltage_accumu : 0|16@1+ (0.02,0) [-655.36|655.34] "V" Vector__XXX
+
+BO_ 2551228064 Vehicle_Controller_Commands1: 8 Vector__XXX
+ SG_ Battery_Minimum_Temp : 56|8@1+ (1,-50) [-178|77] "°„C" Vector__XXX
+ SG_ Battery_Maximum_Temp : 48|8@1+ (1,-50) [-178|77] "°„C" Vector__XXX
+ SG_ Vehicle_insulation_resist : 40|8@1+ (0.1,0) [0|25.5] "M¶∏" Vector__XXX
+ SG_ Battery_voltage : 24|16@1+ (0.1,0) [0|6553.5] "" Vector__XXX
+ SG_ Battery_current : 8|16@1+ (0.1,-3000) [-6276.8|276.7] "A" Vector__XXX
+ SG_ SOC : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+
+BO_ 2365524207 VCU_Command: 6 Vector__XXX
+ SG_ Torque_command : 32|16@1+ (2,-64000) [0|0] "Nm" Vector__XXX
+ SG_ Speed_command : 8|16@1+ (1,-15000) [-15000|50535] "rpm" Vector__XXX
+
+BO_ 2365523464 MCU2_Status_2: 6 Vector__XXX
+ SG_ Reverse_Torque_Limit : 32|16@1+ (1,-5000) [-37768|27767] "Nm" Vector__XXX
+ SG_ Forward_Torque_Limit : 16|16@1+ (1,0) [-32768|32767] "Nm" Vector__XXX
+ SG_ Electronically_Controlled_Temp : 8|8@1+ (1,-40) [-40|215] "°„C" Vector__XXX
+ SG_ Motor_Temperature : 0|8@1+ (1,-40) [-168|87] "°„C" Vector__XXX
+
+BO_ 2297561248 VCU_Status: 8 Vector__XXX
+ SG_ Brake_Pedal_Opening : 56|8@1+ (1,0) [-128|127] "%" Vector__XXX
+ SG_ Accelerator_Pedal_Opening : 48|8@1+ (1,0) [-128|127] "%" Vector__XXX
+ SG_ Speed : 40|8@1+ (1,-50) [-178|77] "km/h" Vector__XXX
+
+BO_ 2365522184 MCU1_Status_1: 6 Vector__XXX
+ SG_ Motor_current : 32|16@1+ (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
+ SG_ Motor_torque : 16|16@1+ (1,-5000) [-37768|27767] "Nm" Vector__XXX
+ SG_ Motor_speed : 0|16@1+ (1,-15000) [-47768|17767] "rpm" Vector__XXX
+
+BO_ 2566890227 Battery_Status_2: 8 Vector__XXX
+ SG_ Battery_Power : 48|16@1+ (0.05,-1500) [-1500|1776.75] "kW" Vector__XXX
+ SG_ Battery_Current : 32|16@1+ (0.1,-3000) [-3000|3553.5] "A" Vector__XXX
+ SG_ Battery_Pack_Voltage : 0|16@1+ (0.1,0) [-3276.8|3276.7] "V" Vector__XXX
+
+BO_ 2566889971 Battery_Status_1: 4 Vector__XXX
+ SG_ SOH : 24|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ SOC : 16|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ Battery_Balance_Status : 12|2@1+ (1,0) [-2|1] "" Vector__XXX
+ SG_ Battery_mode : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Battery_status : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "";
+BA_ "BusType" "CAN";
+
