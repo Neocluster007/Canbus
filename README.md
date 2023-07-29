@@ -7,9 +7,6 @@ sudo apt-get install gpsd gpsd-clients
 man gpsd
 cat /dev/serial0
 
-AAAA 0001
-
-
 # Reference
 
 > Intial PI
@@ -47,5 +44,5 @@ AAAA 0001
 > Git Command
 
 - git add .
-- git git commit -m “change function b”
+- git commit -m “change function b”
 - git push
