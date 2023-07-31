@@ -41,8 +41,16 @@ cat /dev/serial0
 - https://nodered.org/docs/getting-started/raspberrypi
 
 
+> Remoteit new Cleim
+
+- Delete the file /etc/remoteit/config.json
+- Reboot the device
+- Get the new claim code by running:
+- grep -i claim /etc/remoteit/config.json
+
 > Git Command
 
 - git add .
 - git commit -m “change function b”
 - git push
+
