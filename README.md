@@ -43,6 +43,8 @@ cat /dev/serial0
 
 > Remoteit new Cleim
 
+- sudo rm /etc/remoteit/config.json
+
 - Delete the file /etc/remoteit/config.json
 - Reboot the device
 - Get the new claim code by running:
